@@ -1,0 +1,53 @@
+@media only screen and (max-width: 1020px) {
+    .navbar nav {   
+        display: grid;
+        justify-content: center;
+        gap: 10px;
+    }
+    .logo {
+        width: 115%;
+        text-align: center;
+    }
+    .search-box {
+        justify-content: right;
+    }
+    .search-box #search-input {
+        display: none;
+    }
+    .search-box input::placeholder {
+        color: transparent;
+    }
+    .search-box .win-full-i {
+        position: relative;
+        top: -52px;
+        right: -46px;
+        background-color: #3D3E42;
+        padding: 10px 12px;
+        border-radius: 50%;
+    }
+    nav span {
+        display: flex;
+    }
+    .search-btn-hide {
+        display: none;
+    }
+    .fa-xmark {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .logo {
+        width: 100%;
+    }
+    .search-box .win-full-i {
+        top: 0;
+        right: 0;
+    }
+    .search-box {
+        display: none;
+    }
+    .p-section {
+        padding: 40px 20px;
+    }
+}
