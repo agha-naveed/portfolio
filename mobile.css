@@ -72,6 +72,14 @@
     .my-pic img {
         width: 85%;
     }
+
+    
+    .about-sec {
+        width: fit-content;
+    }
+    .about-span {
+        display: grid;
+    }
 }
 
 @media only screen and (max-width: 650px) {
@@ -86,7 +94,7 @@
         display: none;
     }
     .p-section {
-        padding: 40px 20px;
+        padding: 40px 40px;
     }
     .social-icons {
         display: none;

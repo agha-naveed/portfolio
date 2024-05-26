@@ -5,6 +5,7 @@
     --text-col: white;
     --grayish-col: #9A9B9C;
     --font-color: #FFC86B;
+    --bg2-col: #3D3E42;
 }
 
 * {
@@ -253,7 +254,79 @@ nav ul .active-page {
 }
 /* ========== Header Center Finished ========== */
 
+/* ========== About & Skills ========== */
+.about-skills-section {
+    display: grid;
+    justify-content: center;
+    background-color: var(--bg2-col);
+    justify-items: center;
+    gap: 120px;
+}
+.about-sec {
+    width: 70%;
+}
+.about-sec h1 {
+    color: var(--text-col);
+    font-size: 35px;
+}
+.about-sec .about-span {
+    gap: 12px;
+}
+.about-span p {
+    color: var(--text-col);
+}
+.about-span p span {
+    color: var(--font-color);
+}
+
+.skills-sec {
+    display: grid;
+    gap: 30px;
+}
+.skills-sec h1 {
+    text-align: center;
+    color: var(--text-col);
+    font-size: 35px;
+}
+
+.skills-grid-view {
+    display: grid;
+    gap: 20px;
+}
+.skills-grid-view .skills-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.skills-box {
+    border-radius: 12px;
+    background-color: #313233;
+    width: 20vmin;
+    height: 20vmin;
+    align-content: center;
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+}
+.skills-box p {
+    color: var(--text-col);
+    font-size: 18px;
+}
+.skills-box img {
+    width: 30%;
+}
+
+/* ========== About & Skills Finished ========== */
+
+
 /* Global Classes */
+.h-line {
+    width: 110px;
+    height: 3.5px;
+    background-color: var(--font-color);
+    margin-top: 12px;
+}
+
 .d-flex {
     display: flex;
 }
