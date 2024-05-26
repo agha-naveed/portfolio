@@ -215,6 +215,12 @@ nav ul .active-page {
     font-weight: 500;
     border: 5px solid var(--font-color);
     border-radius: 10px;
+    transition: 0.1s ease-out;
+}
+.contact-me-btn a:hover {
+    background-color: var(--font-color);
+    color: var(--bg-col);
+    box-shadow: 0 0 15px var(--font-color);
 }
 
 .social-icons {
@@ -301,12 +307,23 @@ nav ul .active-page {
 .skills-grid-view {
     display: grid;
     gap: 20px;
+    overflow: hidden;
 }
 .skills-grid-view .skills-row {
     display: flex;
     justify-content: center;
     gap: 20px;
+    position: relative;
+    transition: 0.5s ease-out;
+    opacity: 0;
 }
+.skills-row:nth-child(1) {
+    left: -100%;
+}
+.skills-row:nth-child(2) {
+    right: -100%;
+}
+
 .skills-box {
     border-radius: 12px;
     background-color: #313233;
@@ -330,6 +347,8 @@ nav ul .active-page {
     width: 30%;
 }
 
+
+
 /* ========== About & Skills Finished ========== */
 
 
@@ -341,9 +360,15 @@ nav ul .active-page {
     margin-top: 12px;
 }
 
-.r-hide {
-    right: -100%;
+.r-show {
+    opacity: 1 !important;
+    right: 0 !important;
 }
+.l-show {
+    opacity: 1 !important;
+    left: 0 !important;
+}
+
 
 .d-flex {
     display: flex;
