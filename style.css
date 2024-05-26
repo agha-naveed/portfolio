@@ -32,6 +32,7 @@ nav {
 nav ul {
     list-style: none;
     gap: 2px;
+    display: flex;
 }
 nav ul li {
     padding: 8px 18px;
@@ -85,11 +86,12 @@ nav ul .active-page {
 }
 /* --- Responsive Search Bar --- */
 .resp-search {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.562);
     backdrop-filter: blur(10px);
+    z-index: 2;
     width: 100%;
     height: 100vh;
     align-content: center;
@@ -118,7 +120,7 @@ nav ul .active-page {
     right: 30px;
     border-radius: 50%;
 }
-.fa-xmark {
+.search-close-btn {
     display: none;
     color: white;
     position: absolute;
@@ -130,11 +132,17 @@ nav ul .active-page {
 .menu-bar {
     display: none;
 }
-.menu-bar i {
+.fa-bars {
     color: white;
-    font-size: 25px;
+    font-size: 22px;
 }
-
+.menu-close-btn {
+    position: fixed;
+    color: var(--text-col);
+    font-size: 25px;
+    z-index: 5;
+    transition: 0.2s all;
+}
 
 .logo .btn-shine {
     color: var(--text-col);
@@ -274,6 +282,7 @@ nav ul .active-page {
 }
 .about-span p {
     color: var(--text-col);
+    text-align: justify;
 }
 .about-span p span {
     color: var(--font-color);
@@ -301,12 +310,17 @@ nav ul .active-page {
 .skills-box {
     border-radius: 12px;
     background-color: #313233;
-    width: 20vmin;
-    height: 20vmin;
+    width: 200px;
+    height: 200px;
     align-content: center;
     display: grid;
     justify-items: center;
     gap: 20px;
+    transition: 0.1s ease-out;
+    cursor: pointer;
+}
+.skills-box:hover {
+    background-color: var(--font-color);
 }
 .skills-box p {
     color: var(--text-col);
@@ -325,6 +339,10 @@ nav ul .active-page {
     height: 3.5px;
     background-color: var(--font-color);
     margin-top: 12px;
+}
+
+.r-hide {
+    right: -100%;
 }
 
 .d-flex {
