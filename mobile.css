@@ -88,4 +88,7 @@
     .p-section {
         padding: 40px 20px;
     }
+    .social-icons {
+        display: none;
+    }
 }

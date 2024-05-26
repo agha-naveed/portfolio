@@ -207,6 +207,42 @@ nav ul .active-page {
     border: 5px solid var(--font-color);
     border-radius: 10px;
 }
+
+.social-icons {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: flex-end;
+}
+.social-icons .verti-line {
+    /* position: absolute; */
+    width: 3.5px;
+    height: 100px;
+    background-color: var(--font-color);
+}
+.social-icons div i {
+    cursor: pointer;
+    font-size: 25px;
+}
+.fb-logo, .twitter-logo, .insta-logo, .github-logo {
+    color: var(--text-col);
+}
+.fb-logo:hover {
+    color: #1877F2;
+}
+.insta-logo:hover {
+    -webkit-text-fill-color: transparent;
+    background-color: linear;
+    background-image: linear-gradient(15deg, #ffdf9e, #ffc273, #e56969, #c1558b, #8a49a1);
+    background-clip: text;
+}
+.twitter-logo:hover {
+    color: 	#1DA1F2;
+}
+
 .my-pic {
     position: relative;
     top: 46px;
