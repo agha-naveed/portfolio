@@ -1,4 +1,8 @@
 @media only screen and (max-width: 1020px) {
+    .front-section {
+        display: grid;
+        gap: 60px;
+    }
     .navbar nav {   
         display: grid;
         justify-content: center;
@@ -33,6 +37,40 @@
     }
     .fa-xmark {
         display: block;
+    }
+
+    .header-center {
+        flex-direction: column;
+    }
+    .header-center .front-details {
+        width: 100%;
+        justify-items: center;
+        padding: 0;
+    }
+    .front-details .sp-name {
+        display: flex;
+        gap: 0;
+    }
+    .sp-name h1 {
+        font-size: 8vmin;
+    }
+    .sp-name h2 {
+        font-size: 4vmin;
+    }
+    .front-details .sp-profession h2 {
+        font-size: 4.5vmin;
+    }
+    .contact-me-btn a{
+        font-size: 4vmin;
+    }
+    .my-pic {
+        top: 44px;
+        width: auto;
+        text-align: center;
+        height: fit-content;
+    }
+    .my-pic img {
+        width: 85%;
     }
 }
 
