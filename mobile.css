@@ -29,6 +29,9 @@
         padding: 10px 12px;
         border-radius: 50%;
     }
+    .search-cover-show {
+        display: block !important;
+    }
     nav span {
         display: flex;
     }

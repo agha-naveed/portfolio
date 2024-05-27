@@ -3,10 +3,10 @@ let respSearch = document.querySelector('.resp-search')
 let searchCloseBtn = document.querySelector('.search-close-btn')
 
 searchBtn.addEventListener('click', () => {
-    respSearch.style.display = 'block'
+    respSearch.classList.add('search-cover-show')
 })
 searchCloseBtn.onclick = () => {
-    respSearch.style.display = 'none'
+    respSearch.classList.remove('search-cover-show')
 }
 
 let menuBtn = document.querySelector('.menu-bar')
@@ -24,12 +24,9 @@ menuCloseBtn.addEventListener('click', () => {
     menuCloseBtn.classList.add('r-hide')
 })
 
-window.addEventListener('scroll', checkBoxes)
 
 let skillsRow1 = document.querySelectorAll('.skills-row')[0]
 let skillsRow2 = document.querySelectorAll('.skills-row')[1]
-
-checkBoxes()
 
 function checkBoxes() {
     const triggerBottom = window.innerHeight / 5 * 4;
@@ -44,3 +41,6 @@ function checkBoxes() {
         skillsRow2.classList.remove('r-show')
     }
 }
+
+checkBoxes()
+window.addEventListener('scroll', checkBoxes)
