@@ -39,9 +39,10 @@ body{
     overflow: hidden;
 }
 
-.snow, .snow:before, .snow:after {
+.snowA, .snowA::before, .snowA::after {
+    content: "";
     z-index: 1;
-    position: absolute;
+    position: fixed;
     top: -650px;
     left: 0;
     bottom: 0;
@@ -49,32 +50,25 @@ body{
     background-image: 
     radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
     radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
-    radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
-    radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
     radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
-    radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
-    radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
-    radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
-    radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+    radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent);
     background-size: 650px 650px;
-    animation: snow 3s linear infinite;
-    content: "";
+    animation: snow 9s linear infinite;
+    transition: 5s all;
 }
 
-.snow:after {
+.snowA:after {
     margin-left: -250px;
     opacity: 0.5;
     filter: blur(2px);
-    animation-duration: 6s;
-    animation-direction: reverse;
+    animation-duration: 5s;
 }
 
-.snow:before {
+.snowA:before {
     margin-left: -350px;
     opacity: 0.7;
-    filter: blur(1px);
-    animation-duration: 9s;
-    animation-direction: reverse;
+    filter: blur(2.5px);
+    animation-duration: 6s;
 }
 
 @keyframes snow {
@@ -303,6 +297,7 @@ nav ul .active-page {
     align-items: center;
     gap: 16px;
     align-self: flex-end;
+    z-index: 5;
 }
 .social-icons .verti-line {
     /* position: absolute; */
@@ -416,6 +411,9 @@ nav ul .active-page {
 .skills-box:hover {
     background-color: var(--font-color);
 }
+.skills-box:hover p {
+    color: var(--bg2-col);
+}
 .skills-box p {
     color: var(--text-col);
     font-size: 18px;
@@ -424,13 +422,38 @@ nav ul .active-page {
     width: 30%;
 }
 
-
-
 /* ========== About & Skills Finished ========== */
 
 
-/* Global Classes */
+/* ========== Project Section Finished ========== */
+.project-section {
+    position: relative;
+    z-index: 20;
+    background-color: var(--bg-col);
+}
+.projects {
+    display: flex;
+}
+.pr {
+    display: flex;
+}
+.pr-date {
+    clip-path: polygon(0% 20%, 76% 20%, 100% 50%, 76% 80%, 0% 80%);
+    background-color: var(--bg2-col);
+    width: 102px;
+    height: 72px;
+    align-content: center;
+}
+.pr-date p {
+    font-size: 23.5px;
+    text-align: center;
+    width: 88%;
+    color: var(--text-col);
+}
 
+/* ========== Project Section Finished ========== */
+
+/* ------- Global Classes -------- */
 
 .h-line {
     width: 110px;

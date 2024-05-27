@@ -63,3 +63,4 @@ function checkBoxes() {
 
 checkBoxes()
 window.addEventListener('scroll', checkBoxes)
+
