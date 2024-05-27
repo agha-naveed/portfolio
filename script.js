@@ -25,6 +25,25 @@ menuCloseBtn.addEventListener('click', () => {
 })
 
 
+let fbLogo = document.querySelector('.fb-logo')
+let twitterLogo = document.querySelector('.twitter-logo')
+let instaLogo = document.querySelector('.insta-logo')
+let githubLogo = document.querySelector('.github-logo')
+
+fbLogo.onclick = () => {
+    window.open('https://facebook.com/naveedbalti31', 'Facebook Page', 'width=900, height=900').moveBy(200, 200)
+}
+twitterLogo.onclick = () => {
+    window.open('https://twitter.com/naveed_kazmi31', 'Twitter Page', 'width=900, height=900').moveBy(200, 200)
+}
+instaLogo.onclick = () => {
+    window.open('https://instagram.com/aghanaveed_', 'Instagram Page', 'width=900, height=900').moveBy(200, 200)
+}
+githubLogo.onclick = () => {
+    window.open('https://github.com/agha-naveed', 'Github Page', 'width=900, height=900').moveBy(200, 200)
+}
+
+
 let skillsRow1 = document.querySelectorAll('.skills-row')[0]
 let skillsRow2 = document.querySelectorAll('.skills-row')[1]
 
