@@ -51,7 +51,9 @@ function checkBoxes() {
     const triggerBottom = window.innerHeight / 5 * 4;
 
     const boxTop = skillsRow1.getBoundingClientRect().top;
-    if(boxTop < triggerBottom) {
+    const boxBottom = skillsRow1.getBoundingClientRect().bottom;
+
+    if(boxTop < triggerBottom && boxTop > 0) {
         skillsRow1.classList.add('l-show')
         skillsRow2.classList.add('r-show')
     }
@@ -66,6 +68,7 @@ window.addEventListener('scroll', checkBoxes)
 
 const myPic = document.querySelector('.my-pic > img')
 const myDetails = document.querySelector('.front-details')
+
 window.addEventListener('mousemove', (e) => {
     myPic.style.right = (e.clientX / 100) + 'px'
     myDetails.style.left = (e.clientX / 100) + 'px'

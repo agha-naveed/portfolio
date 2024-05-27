@@ -124,11 +124,18 @@
         font-size: 12px;
     }
 }
-@media only screen and (max-width: 550px) {
+
+@media only screen and (max-width: 570px) {
     .pr {
         flex-direction: column;
     }
+
+    .c-links .div {
+        flex-direction: column;
+        align-items: center;
+    }
 }
+
 @media only screen and (max-width: 460px) {
     .skills-grid-view .skills-row {
         display: grid;
@@ -178,5 +185,12 @@
     }
     .skills-sec h1 {
         font-size: 30px;
+    }
+
+    .c-links .contact {
+        display: grid;
+        gap: 4px;
+        padding: 14px 16px;
+        text-align: center;
     }
 }

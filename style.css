@@ -49,9 +49,7 @@ body{
     right: 0;
     background-image: 
     radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
-    radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
-    radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
-    radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent);
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent);
     background-size: 650px 650px;
     animation: snow 9s linear infinite;
     transition: 5s all;
@@ -454,6 +452,22 @@ nav ul .active-page {
     gap: 20px;
     width: 95%;
 }
+.pr-details {
+    display: grid;
+    gap: 16px;
+}
+.pr-details h2 {
+    font-size: 26px;
+    color: var(--text-col);
+    transition: 0.1s ease-out;
+}
+.pr-details p {
+    font-size: 17px;
+    color: var(--text-col);
+}
+.pr:hover .pr-details h2 {
+    color: var(--font-color);
+}
 
 .pr-date {
     clip-path: polygon(0% 20%, 76% 20%, 100% 50%, 76% 80%, 0% 80%);
@@ -490,19 +504,62 @@ nav ul .active-page {
     height: 74%;
     background-color: var(--grayish-col);
 }
-.pr-details {
-    display: grid;
-    gap: 16px;
-}
-.pr-details h2 {
-    font-size: 26px;
-    color: var(--text-col);
-}
-.pr-details p {
-    font-size: 17px;
-    color: var(--text-col);
-}
+
 /* ========== Project Section Finished ========== */
+
+
+/* ========== Footer Contact Me ========== */
+
+
+
+
+/* ========== Footer Contact Me Finished ========== */
+
+.contact-section {
+    display: grid;
+    position: relative;
+    z-index: 10;
+    background-color: var(--bg2-col);
+    border-top: 3px solid var(--font-color);
+    border-bottom: 3px solid var(--font-color);
+    place-items: center;
+}
+.c-me {
+    display: grid;
+    gap: 30px;
+}
+.c-me h1 {
+    text-align: center;
+    font-size: 35px;
+    color: var(--text-col);
+}
+.c-links {
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+}
+.c-links .div {
+    display: flex;
+    gap: 15px;
+}
+.c-links .contact {
+    display: flex;
+    background-color: var(--bg-col);
+    border-radius: 8px;
+    align-items: center;
+    padding: 16px 26px;
+    gap: 14px;
+    width: fit-content;
+}
+.contact i {
+    color: white;
+    font-size: 20px;
+}
+.contact p {
+    color: var(--font-color);
+    font-size: 18px;
+}
+
 
 /* ------- Global Classes -------- */
 
@@ -525,7 +582,9 @@ nav ul .active-page {
     transform: translateX(0) !important;
 }
 
-
+.m-b-100 {
+    margin-bottom: 100px;
+}
 .d-flex {
     display: flex;
 }
