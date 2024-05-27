@@ -251,6 +251,7 @@ nav ul .active-page {
     gap: 15px;
     display: grid;
     padding: 0 0 20px 30px;
+    position: relative;
 }
 .front-details .sp-name {
     display: flex;
@@ -348,7 +349,7 @@ nav ul .active-page {
     z-index: 10;
 }
 .about-sec {
-    width: 70%;
+    width: 65%;
 }
 .about-sec h1 {
     color: var(--text-col);
@@ -430,27 +431,77 @@ nav ul .active-page {
     position: relative;
     z-index: 20;
     background-color: var(--bg-col);
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+}
+.project-body {
+    width: 65%;
+    display: grid;
+    gap: 35px;
+}
+.pr-heading h1 {
+    color: var(--text-col);
+    font-size: 35px;
 }
 .projects {
-    display: flex;
+    gap: 50px;
+    display: grid;
+    justify-content: right;
 }
 .pr {
     display: flex;
+    gap: 20px;
+    width: 95%;
 }
+
 .pr-date {
     clip-path: polygon(0% 20%, 76% 20%, 100% 50%, 76% 80%, 0% 80%);
     background-color: var(--bg2-col);
     width: 102px;
     height: 72px;
     align-content: center;
+    padding: 10px 27px;
 }
 .pr-date p {
     font-size: 23.5px;
+    position: relative;
+    left: -8px;
     text-align: center;
-    width: 88%;
+    /* width: 88%; */
     color: var(--text-col);
 }
 
+.pr-mid-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.pr-mid-line .pr-circle {
+    width: 25px;
+    height: 25px;
+    box-shadow: 0 0 15px 2px var(--font-color);
+    background-color: var(--font-color);
+    border-radius: 50%;
+}
+.pr-mid-line .pr-line {
+    width: 4px;
+    height: 74%;
+    background-color: var(--grayish-col);
+}
+.pr-details {
+    display: grid;
+    gap: 16px;
+}
+.pr-details h2 {
+    font-size: 26px;
+    color: var(--text-col);
+}
+.pr-details p {
+    font-size: 17px;
+    color: var(--text-col);
+}
 /* ========== Project Section Finished ========== */
 
 /* ------- Global Classes -------- */

@@ -64,3 +64,9 @@ function checkBoxes() {
 checkBoxes()
 window.addEventListener('scroll', checkBoxes)
 
+const myPic = document.querySelector('.my-pic > img')
+const myDetails = document.querySelector('.front-details')
+window.addEventListener('mousemove', (e) => {
+    myPic.style.right = (e.clientX / 100) + 'px'
+    myDetails.style.left = (e.clientX / 100) + 'px'
+})
