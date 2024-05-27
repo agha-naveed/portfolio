@@ -29,8 +29,71 @@ body{
     width: 100%;
     height: 100%;
     background-color: var(--bg-col);
+    overflow: hidden;
 }
+
+/* ========== Snow Falling =========== */
+.snow_falling{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.snow, .snow:before, .snow:after {
+    z-index: 1;
+    position: absolute;
+    top: -650px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: 
+    radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
+    radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
+    radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
+    radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
+    radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
+    radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
+    radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
+    radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+    background-size: 650px 650px;
+    animation: snow 3s linear infinite;
+    content: "";
+}
+
+.snow:after {
+    margin-left: -250px;
+    opacity: 0.5;
+    filter: blur(2px);
+    animation-duration: 6s;
+    animation-direction: reverse;
+}
+
+.snow:before {
+    margin-left: -350px;
+    opacity: 0.7;
+    filter: blur(1px);
+    animation-duration: 9s;
+    animation-direction: reverse;
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(650px);
+  }
+}
+
+
+
+
+/* ========== Snow Falling Ended =========== */
+
 /* =========== Navbar =========== */
+
+.navbar {
+    position: relative;
+    z-index: 12;
+}
 nav {
     align-items: center;
 }
@@ -96,7 +159,7 @@ nav ul .active-page {
     left: 0;
     background-color: rgba(0, 0, 0, 0.562);
     backdrop-filter: blur(10px);
-    z-index: 2;
+    z-index: 20;
     width: 100%;
     height: 100vh;
     align-content: center;
@@ -143,6 +206,8 @@ nav ul .active-page {
 }
 .menu-close-btn {
     position: fixed;
+    right: 40px;
+    top: 70px;
     color: var(--text-col);
     font-size: 25px;
     z-index: 5;
@@ -184,8 +249,10 @@ nav ul .active-page {
 .header-center {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .header-center .front-details {
+    z-index: 3;
     align-content: center;
     gap: 15px;
     display: grid;
@@ -269,6 +336,8 @@ nav ul .active-page {
     width: fit-content;
 }
 .my-pic img {
+    position: relative;
+    z-index: 0;
     width: 85%;
 }
 /* ========== Header Center Finished ========== */
@@ -280,6 +349,8 @@ nav ul .active-page {
     background-color: var(--bg2-col);
     justify-items: center;
     gap: 120px;
+    position: relative;
+    z-index: 10;
 }
 .about-sec {
     width: 70%;
@@ -359,6 +430,8 @@ nav ul .active-page {
 
 
 /* Global Classes */
+
+
 .h-line {
     width: 110px;
     height: 3.5px;

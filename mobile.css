@@ -49,6 +49,7 @@
         width: 100%;
         justify-items: center;
         padding: 0;
+        z-index: 2;
     }
     .front-details .sp-name {
         display: flex;
