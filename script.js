@@ -9,39 +9,48 @@ searchCloseBtn.onclick = () => {
     respSearch.classList.remove('search-cover-show')
 }
 
-let menuBtn = document.querySelector('.menu-bar')
+let menuBtn = document.querySelector('.menu-bar > .menu-open-bar')
 let menuCloseBtn = document.querySelector('.menu-bar > .menu-close-btn')
 let menu = document.querySelector('.navbar > nav > ul')
 
 menuBtn.addEventListener('click', () => {
-    menu.style.right = 0
-    menu.classList.remove('r-hide')
-    menuCloseBtn.classList.remove('r-hide')
+    menu.classList.add('r-show')
+    menuCloseBtn.classList.add('r-show')
+    menuCloseBtn.style.right = '40px'
 })
 
 menuCloseBtn.addEventListener('click', () => {
-    menu.classList.add('r-hide')
-    menuCloseBtn.classList.add('r-hide')
+    menu.classList.remove('r-show')
+    menuCloseBtn.classList.remove('r-show')
+    menuCloseBtn.style.right = 0
 })
 
 
-let fbLogo = document.querySelector('.fb-logo')
-let twitterLogo = document.querySelector('.twitter-logo')
-let instaLogo = document.querySelector('.insta-logo')
-let githubLogo = document.querySelector('.github-logo')
+let fbLogo = document.querySelectorAll('.fb-logo')
+let twitterLogo = document.querySelectorAll('.twitter-logo')
+let instaLogo = document.querySelectorAll('.insta-logo')
+let githubLogo = document.querySelectorAll('.github-logo')
 
-fbLogo.onclick = () => {
-    window.open('https://facebook.com/naveedbalti31', 'Facebook Page', 'width=900, height=900').moveBy(200, 200)
-}
-twitterLogo.onclick = () => {
-    window.open('https://twitter.com/naveed_kazmi31', 'Twitter Page', 'width=900, height=900').moveBy(200, 200)
-}
-instaLogo.onclick = () => {
-    window.open('https://instagram.com/aghanaveed_', 'Instagram Page', 'width=900, height=900').moveBy(200, 200)
-}
-githubLogo.onclick = () => {
-    window.open('https://github.com/agha-naveed', 'Github Page', 'width=900, height=900').moveBy(200, 200)
-}
+fbLogo.forEach(elem => {
+    elem.addEventListener('click', () => {
+        window.open('https://facebook.com/naveedbalti31', 'Facebook Page', 'width=900, height=900').moveBy(200, 200)
+    })
+});
+twitterLogo.forEach(elem => {
+    elem.addEventListener('click', () => {
+        window.open('https://twitter.com/naveed_kazmi31', 'Twitter Page', 'width=900, height=900').moveBy(200, 200)
+    })
+});
+instaLogo.forEach(elem => {
+    elem.addEventListener('click', () => {
+        window.open('https://instagram.com/aghanaveed_', 'Instagram Page', 'width=900, height=900').moveBy(200, 200)
+    })
+});
+githubLogo.forEach(elem => {
+    elem.addEventListener('click', () => {
+        window.open('https://github.com/agha-naveed', 'Github Page', 'width=900, height=900').moveBy(200, 200)
+    })
+});
 
 
 let skillsRow1 = document.querySelectorAll('.skills-row')[0]
@@ -72,4 +81,10 @@ const myDetails = document.querySelector('.front-details')
 window.addEventListener('mousemove', (e) => {
     myPic.style.right = (e.clientX / 100) + 'px'
     myDetails.style.left = (e.clientX / 100) + 'px'
+})
+
+const projectDetails = document.querySelector('.pr-details')
+
+projectDetails.addEventListener('mouseover', () => {
+    
 })
