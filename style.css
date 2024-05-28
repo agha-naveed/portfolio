@@ -87,17 +87,12 @@ nav ul li {
     padding: 8px 18px;
     color: var(--grayish-col);
     font-size: 18.5px;
-    background-image: linear-gradient(140deg, var(--bg-col), var(--grayish-col), var(--bg-col));
-    border-radius: 20px;
-    background-size: 0 3px;
-    background-repeat: no-repeat;
-    background-position: center bottom;
     text-decoration: none;
     transition:  300ms ease;
 }
 nav ul li:hover {
     cursor: pointer;
-    background-size: 100% 3px;
+    color: var(--text-col);
 }
 
 nav ul .active-page {
