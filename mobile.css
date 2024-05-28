@@ -1,4 +1,11 @@
 @media only screen and (max-width: 1020px) {
+    .btn-shine {
+        display: none;
+    }
+    .logo img {
+        display: block;
+    }
+    
     .front-section {
         display: grid;
         gap: 60px;
@@ -9,11 +16,13 @@
     .navbar nav {   
         display: grid;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
     }
     .logo {
         width: 115%;
         text-align: center;
+        display: grid;
+        justify-content: center;
     }
     .search-box {
         justify-content: right;
@@ -26,7 +35,7 @@
     }
     .search-box .win-full-i {
         position: relative;
-        top: -52px;
+        top: -61px;
         right: -46px;
         background-color: #3D3E42;
         padding: 10px 12px;

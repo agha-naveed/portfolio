@@ -195,7 +195,7 @@ nav ul .active-page {
     transition: 0.2s all;
 }
 
-.logo .btn-shine {
+.btn-shine {
     color: var(--text-col);
     background: linear-gradient(to right, #4d4d4dc2 0, rgba(255, 255, 255, 0.514) 10%, #4d4d4dad 20%);
     -webkit-background-clip: text;
@@ -207,7 +207,10 @@ nav ul .active-page {
     font-size: 27px;
     text-decoration: none;
     white-space: nowrap;
-    /* background-position: 150px; */
+}
+.logo img {
+    width: 70px;
+    display: none;
 }
 
 @keyframes shine{
