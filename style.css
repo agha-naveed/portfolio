@@ -503,10 +503,6 @@ nav ul .active-page {
 /* ========== Footer Contact Me ========== */
 
 
-
-
-/* ========== Footer Contact Me Finished ========== */
-
 .contact-section {
     display: grid;
     position: relative;
@@ -598,6 +594,8 @@ nav ul .active-page {
 }
 .footer-social-icons div i {
     font-size: 23px;
+}
+.footer-social-icons div {
     cursor: pointer;
 }
 
@@ -607,6 +605,8 @@ nav ul .active-page {
     height: 50px;
     background-color: var(--bg-col);
 }
+
+/* ========== Footer Contact Me Finished ========== */
 
 /* ------- Global Classes -------- */
 
