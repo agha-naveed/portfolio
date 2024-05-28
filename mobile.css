@@ -125,6 +125,9 @@
     .logo {
         width: 100%;
     }
+    .logo img {
+        width: 60px;
+    }
     .search-box .win-full-i {
         top: 0;
         right: 0;
