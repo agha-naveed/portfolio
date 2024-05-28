@@ -14,16 +14,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-html{
+html, body {
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
 }
-body{
-    height: 100%;
-    width: 100%;
-}
-
 
 .front-section {
     width: 100%;
@@ -550,14 +545,27 @@ nav ul .active-page {
     padding: 16px 26px;
     gap: 14px;
     width: fit-content;
+    transition: 0.1s ease-out;
+    cursor: pointer;
 }
 .contact i {
     color: white;
     font-size: 20px;
+    transition: 0.1s ease-out;
 }
 .contact p {
     color: var(--font-color);
     font-size: 18px;
+    transition: 0.1s ease-out;
+}
+.contact:hover {
+    background-color: var(--font-color);
+}
+.contact:hover p {
+    color: var(--bg-col);
+}
+.contact:hover i {
+    color: var(--bg-col);
 }
 
 

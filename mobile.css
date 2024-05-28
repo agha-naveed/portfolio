@@ -189,8 +189,14 @@
 
     .c-links .contact {
         display: grid;
-        gap: 4px;
+        gap: 5px;
         padding: 14px 16px;
         text-align: center;
+    }
+    .contact i {
+        font-size: 18px;
+    }
+    .contact p {
+        font-size: 16px;
     }
 }
