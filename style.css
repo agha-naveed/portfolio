@@ -27,6 +27,34 @@ html, body {
     overflow: hidden;
 }
 
+.up-arrow-btn {
+    display: grid;
+    z-index: 50;
+    position: fixed;
+    right: 2.5%;
+    bottom: -10%;
+    cursor: pointer;
+    background-color: black;
+    padding: 10px 11px;
+    border-radius: 50%;
+    transition: 0.5s ease;
+}
+.up-arrow-btn:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.671);
+    transform: scale(1.2);
+}
+.up-arrow-btn i {
+    font-size: 22px;
+    color: white;
+}
+.up-arrow-hide {
+    opacity: 0;
+    bottom: -10%;
+}
+.up-arrow-show {
+    opacity: 1;
+    bottom: 3.5%;
+}
 /* ========== Snow Falling =========== */
 .snowA, .snowA::before, .snowA::after {
     content: "";
@@ -83,14 +111,14 @@ nav ul {
     gap: 2px;
     display: flex;
 }
-nav ul li {
+nav ul li a {
     padding: 8px 18px;
     color: var(--grayish-col);
     font-size: 18.5px;
     text-decoration: none;
     transition:  300ms ease;
 }
-nav ul li:hover {
+nav ul li a:hover {
     cursor: pointer;
     color: var(--text-col);
 }
@@ -308,7 +336,7 @@ nav ul .active-page {
     background-clip: text;
 }
 .twitter-logo:hover {
-    color: 	#1DA1F2;
+    color: 	#0e0e0e;
 }
 
 .my-pic {

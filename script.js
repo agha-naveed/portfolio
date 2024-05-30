@@ -38,7 +38,7 @@ fbLogo.forEach(elem => {
 });
 twitterLogo.forEach(elem => {
     elem.addEventListener('click', () => {
-        window.open('https://twitter.com/naveed_kazmi31', 'Twitter Page', 'width=900, height=900').moveBy(200, 200)
+        window.open('https://x.com/naveed_kazmi31', 'Twitter Page', 'width=900, height=900').moveBy(200, 200)
     })
 });
 instaLogo.forEach(elem => {
@@ -83,8 +83,24 @@ window.addEventListener('mousemove', (e) => {
     myDetails.style.left = (e.clientX / 100) + 'px'
 })
 
-const projectDetails = document.querySelector('.pr-details')
 
-projectDetails.addEventListener('mouseover', () => {
-    
+
+const upArrowBtn = document.querySelector('.up-arrow-btn')
+
+window.addEventListener('scroll', (e) => {
+    // Arrow Hide
+    if(window.scrollY < 400) {
+        upArrowBtn.classList.add('up-arrow-hide')
+        upArrowBtn.classList.remove('up-arrow-show')
+    }
+
+    // Arrow Show
+    else if(window.scrollY >= 400) {
+        upArrowBtn.classList.remove('up-arrow-hide')
+        upArrowBtn.classList.add('up-arrow-show')
+    }
 })
+
+upArrowBtn.onclick = () => {
+    window.location.href = '#start'
+}
