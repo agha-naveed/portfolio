@@ -222,6 +222,13 @@
         display: block;
     }
 
+    .resp-search-box {
+        display: none;
+    }
+    .menu-inner-search {
+        display: flex;
+    }
+
     .contact-me-btn a {
         padding: 10px 20px;
         border: 3px solid var(--font-color);
@@ -257,6 +264,7 @@
     .r-hide {
         transform: translateX(100%)
     }
+
 }
 
 @media only screen and (max-width: 325px) {

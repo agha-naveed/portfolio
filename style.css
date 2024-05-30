@@ -169,6 +169,27 @@ nav ul .active-page {
 }
 
 /* --- Responsive Search Bar --- */
+.menu-inner-search {
+    display: none;
+    align-items: center;
+}
+.menu-inner-search input {
+    width: 80%;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 10px 32px 10px 13px;
+    border-bottom: 2px solid white;
+    position: relative;
+    left: 10%;
+}
+.menu-inner-search i {
+    position: relative;
+    right: -10px;
+    color: white;
+}
 .resp-search {
     position: fixed;
     top: 0;
@@ -186,7 +207,7 @@ nav ul .active-page {
     color: white;
     background-color: transparent;
     border-bottom: 2px solid white !important;
-    width: 55%;
+    width: 70%;
     font-size: 18px;
     outline: none;
     border: none;
