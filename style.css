@@ -483,7 +483,7 @@ nav ul .active-page {
     justify-content: center;
 }
 .project-body {
-    width: 65%;
+    width: 60%;
     display: grid;
     gap: 35px;
 }
@@ -558,6 +558,90 @@ nav ul .active-page {
     background-color: var(--grayish-col);
 }
 /* ========== Project Section Finished ========== */
+
+/* Flip Box */
+.pr-boxes {
+    display: flex;
+    justify-content: center;
+}
+.pr-images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 10rem;
+    row-gap: 40px;
+}
+
+.pr-flip-box {
+    width: 20rem;
+    perspective: 1000px;
+    cursor: pointer;
+    height: 97%;
+}
+
+.pr-flip-box:nth-child(1) {
+    transform: rotate(-10deg);
+}
+.pr-flip-box:nth-child(3) {
+    transform: rotate(-5deg);
+}
+
+.pr-flip-box:nth-child(2) {
+    transform: rotate(-5deg);
+}
+.pr-flip-box:nth-child(4) {
+    transform: rotate(10deg);
+}
+
+.flip-box-inner {
+    /* border-radius: 10px; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    /* background-color: var(--font-color); */
+}
+
+.pr-flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+.pr-flip-box:hover .flip-box-inner span {
+    left: 0;
+    opacity: 1;
+}
+.flip-box-front-side, .flip-box-back-side {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-box-back-side span {
+    position: relative;
+    top: -70%;
+    left: -100px;
+    opacity: 0;
+    transition: 0.7s ease;
+}
+.flip-box-front-side {
+    color: black;
+}
+
+.flip-box-back-side {
+    position: absolute;
+    top: 0;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.fl-box-front, .fl-box-rear {
+    outline: 5px solid var(--grayish-col);
+    width: 100%;
+    height: -webkit-fill-available;
+}
 
 
 /* ========== Footer Contact Me ========== */

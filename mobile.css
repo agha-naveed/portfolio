@@ -1,3 +1,9 @@
+@media only screen and (max-width: 1222px) {
+    .pr-images {
+        gap: 1vw;
+    }
+}
+
 @media only screen and (max-width: 1020px) {
     .btn-shine {
         display: none;
@@ -113,14 +119,63 @@
     .project-body {
         width: auto ;
     }
+
+    .pr-images {
+        gap: 10vw;
+        row-gap: 6vw;
+    }
+    .pr-boxes {
+        width: 95%;
+    }
+    
+}
+@media only screen and (max-width: 950px) {
+    .pr-images {
+        justify-items: center;
+        grid-template-columns: auto;
+        gap: 0;
+        row-gap: 0;
+    }
+    .fl-box-front, .fl-box-rear {
+        /* height: auto; */
+    }
+    .pr-flip-box {
+        width: 60%;
+    }
+
+    .pr-flip-box:nth-child(2) {
+        position: relative;
+        top: -20px;
+        left: -60px;
+    }
+    .pr-flip-box:nth-child(3) {
+        position: relative;
+        top: -40px;
+        right: -40px;
+    }
+    .pr-flip-box:nth-child(4) {
+        position: relative;
+        top: -80px;
+        left: -60px;
+    }
+
+    .flip-box-back-side span h2 {
+        font-size: 18px;
+    }
+    .c-me, .c-heading, .c-footer {
+        width: 98%;
+    }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 845px) {
     .l-line, .r-line {
         width: 31%;
     }
     .l-line-2, .r-line-2 {
         width: 32%;
+    }
+    .c-me, .c-heading, .c-footer {
+        width: 100%;
     }
 }
 
@@ -137,10 +192,6 @@
     .logo img {
         width: 60px;
     }
-    .search-box .win-full-i {
-        /* top: 0;
-        right: 0; */
-    }
     .search-box {
         display: none;
     }
@@ -156,6 +207,22 @@
 
     .up-arrow-btn {
         display: none;
+    }
+    
+    .pr-images {
+        width: 80%;
+    }
+    .flip-box-back-side span {
+        top: -109%;
+        display: grid;
+        height: 100%;
+        align-content: center;
+    }
+    .flip-box-back-side span h2 {
+        font-size: 14px;
+    }
+    .flip-box-back-side span p {
+        font-size: 12px;
     }
 }
 
@@ -183,10 +250,9 @@
         align-self: center;
         margin-bottom: 10px;
     }
-    
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 470px) {
     .skills-grid-view .skills-row {
         display: grid;
         gap: 14px;
@@ -197,6 +263,23 @@
         width: 100px;
         height: 100px;
     }
+
+    .project-section {
+        overflow: hidden;
+    }
+    
+    
+    .pr-flip-box {
+        width: 80%;
+    }
+    .flip-box-back-side span h2 {
+        font-size: 12px;
+    }
+    .flip-box-back-side span p {
+        font-size: 10px;
+    }
+
+    
 }
 
 @media only screen and (max-width: 400px) {
@@ -244,6 +327,24 @@
     .skills-sec h1 {
         font-size: 30px;
     }
+
+
+    .pr-flip-box:nth-child(2) {
+        position: relative;
+        top: 15px;
+        left: -10px;
+    }
+    .pr-flip-box:nth-child(3) {
+        position: relative;
+        top: 25px;
+        right: -20px;
+    }
+    .pr-flip-box:nth-child(4) {
+        position: relative;
+        top: 28px;
+        left: 0px;
+    }
+
 
     .c-links .contact {
         display: grid;
