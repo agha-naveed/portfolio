@@ -183,7 +183,8 @@ nav ul .active-page {
     padding: 10px 32px 10px 13px;
     border-bottom: 2px solid white;
     position: relative;
-    left: 10%;
+    left: 52%;
+    transform: translate(-48%, 0);
 }
 .menu-inner-search i {
     position: relative;
