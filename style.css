@@ -99,6 +99,11 @@ html, body {
 
 /* =========== Navbar =========== */
 
+.menu-search {
+    display: flex;
+    align-items: center;
+}
+
 .navbar {
     position: relative;
     z-index: 12;
@@ -127,35 +132,42 @@ nav ul .active-page {
     color: var(--text-col);
 }
 
-.search-box {
+.search-box, .resp-search-box {
     display: flex;
     justify-content: right;
 }
-.search-box #search-input {
+.resp-search-box {
+    display: none;
+}
+#search-input, #resp-search-input {
     color: #A7A7A7;
     background-color: #3D3E42;
     border: none;
     outline: none;
-    width: 65%;
-    height: 56px;
     font-size: 22px;
     padding: 12px 20px;
     border-radius: 12px;
     transition: 0.2s linear;
 }
-.search-box #search-input:focus {
+
+#search-input {
+    width: 65%;
+    height: 56px;
+}
+#search-input:focus {
     width: 90%;
 }
 .search-box input::placeholder {
     color: #A7A7A7;
 }
-.search-box .win-full-i {
+.win-full-i {
     align-content: center;
     position: relative;
     right: 40px;
     font-size: 18px;
     color: #A7A7A7;
 }
+
 /* --- Responsive Search Bar --- */
 .resp-search {
     position: fixed;

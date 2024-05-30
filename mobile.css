@@ -30,22 +30,31 @@
     .search-box #search-input {
         display: none;
     }
+
     .search-box input::placeholder {
         color: transparent;
     }
-    .search-box .win-full-i {
+
+    .resp-search-box {
+        display: block;
+    }
+
+    .win-full-i {
         position: relative;
-        top: -61px;
-        right: -46px;
+        right: 0;
         background-color: #3D3E42;
-        padding: 10px 12px;
+        padding: 10px 11px;
         border-radius: 50%;
     }
+
     .search-cover-show {
         display: block !important;
     }
     nav span {
         display: flex;
+    }
+    .search-btn-click {
+        display: none;
     }
     .search-btn-hide {
         display: none;
@@ -129,8 +138,8 @@
         width: 60px;
     }
     .search-box .win-full-i {
-        top: 0;
-        right: 0;
+        /* top: 0;
+        right: 0; */
     }
     .search-box {
         display: none;
@@ -143,6 +152,10 @@
     }
     .skills-box p {
         font-size: 12px;
+    }
+
+    .up-arrow-btn {
+        display: none;
     }
 }
 
@@ -193,6 +206,7 @@
     nav ul {
         position: fixed;
         top: 0;
+        right: 0;
         gap: 25px;
         width: 100%;
         height: 100%;

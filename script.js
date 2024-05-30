@@ -1,6 +1,7 @@
-let searchBtn = document.querySelector('.search-btn-click')
+let searchBtn = document.querySelector('.resp-search-box')
 let respSearch = document.querySelector('.resp-search')
 let searchCloseBtn = document.querySelector('.search-close-btn')
+
 
 searchBtn.addEventListener('click', () => {
     respSearch.classList.add('search-cover-show')
@@ -11,7 +12,7 @@ searchCloseBtn.onclick = () => {
 
 let menuBtn = document.querySelector('.menu-bar > .menu-open-bar')
 let menuCloseBtn = document.querySelector('.menu-bar > .menu-close-btn')
-let menu = document.querySelector('.navbar > nav > ul')
+let menu = document.querySelector('.menu-search > ul')
 
 menuBtn.addEventListener('click', () => {
     menu.classList.add('r-show')
