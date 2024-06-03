@@ -61,12 +61,14 @@ function checkBoxes() {
     const triggerBottom = window.innerHeight / 5 * 4;
 
     const boxTop = skillsRow1.getBoundingClientRect().top;
-    const boxBottom = skillsRow1.getBoundingClientRect().bottom;
 
-    if(boxTop < triggerBottom && boxTop > 0) {
-        skillsRow1.classList.add('l-show')
-        skillsRow2.classList.add('r-show')
+    if(boxTop < triggerBottom && boxTop > -200) {
+        
+            skillsRow1.classList.add('l-show')
+            skillsRow2.classList.add('r-show')
+        
     }
+    
     else {
         skillsRow1.classList.remove('l-show')
         skillsRow2.classList.remove('r-show')
