@@ -64,13 +64,13 @@ function checkBoxes() {
 
     if(boxTop < triggerBottom && boxTop > -200) {
         
-            skillsRow1.classList.add('l-show')
+            skillsRow1.classList.add('r-show')
             skillsRow2.classList.add('r-show')
         
     }
     
     else {
-        skillsRow1.classList.remove('l-show')
+        skillsRow1.classList.remove('r-show')
         skillsRow2.classList.remove('r-show')
     }
 }

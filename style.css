@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
 :root {
     --bg-col: #272829;
     --text-col: white;
@@ -148,6 +147,10 @@ nav ul .active-page {
     padding: 12px 20px;
     border-radius: 12px;
     transition: 0.2s linear;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 #search-input {
@@ -265,9 +268,20 @@ nav ul .active-page {
     text-decoration: none;
     white-space: nowrap;
 }
+.btn-shine a {
+    text-decoration: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;  
+}
 .logo img {
     width: 70px;
     display: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 @keyframes shine{
@@ -308,7 +322,12 @@ nav ul .active-page {
     font-size: 25px;
     font-weight: 100;
     color: var(--text-col);
+    
+}::selection {
+    background-color: var(--font-color);
+    color: var(--bg2-col);
 }
+
 .sp-name h1 {
     color: var(--font-color);
     font-size: 55px;
@@ -382,6 +401,10 @@ nav ul .active-page {
     position: relative;
     z-index: 0;
     width: 85%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 /* ========== Header Center Finished ========== */
 
@@ -434,6 +457,7 @@ nav ul .active-page {
     gap: 20px;
     position: relative;
     transition: 0.5s ease-out;
+    width: 100%;
     opacity: 0;
 }
 .skills-row:nth-child(1) {
@@ -442,6 +466,7 @@ nav ul .active-page {
 .skills-row:nth-child(2) {
     transform: translateX(100%);
 }
+
 
 .skills-box {
     border-radius: 12px;
@@ -452,7 +477,6 @@ nav ul .active-page {
     display: grid;
     justify-items: center;
     gap: 20px;
-    /* transition: 0.1s ease-out; */
     transition: 300ms ease-out;
     cursor: pointer;
 }
@@ -468,6 +492,11 @@ nav ul .active-page {
 }
 .skills-box img {
     width: 30%;
+    
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 /* ========== About & Skills Finished ========== */
@@ -641,6 +670,10 @@ nav ul .active-page {
     outline: 5px solid var(--grayish-col);
     width: 100%;
     height: -webkit-fill-available;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 
@@ -774,11 +807,6 @@ nav ul .active-page {
     opacity: 1 !important;
     transform: translateX(0) !important;
 }
-.l-show {
-    opacity: 1 !important;
-    transform: translateX(0) !important;
-}
-
 .m-b-100 {
     margin-bottom: 100px;
 }
