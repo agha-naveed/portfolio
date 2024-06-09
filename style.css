@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 :root {
     --bg-col: #272829;
     --text-col: white;
@@ -17,6 +18,35 @@ html, body {
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
+    cursor: none;
+}
+.cursor-border {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 15.5px;
+    height: 15.5px;
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: 100;
+    transition: 0.2s ease-out;
+    pointer-events: none;
+}
+.cursor-large {
+    padding: 30px !important;
+}
+.cursor-small {
+    padding: 10px;
+}
+#cursor {
+    position: fixed;
+    background-color: white;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    z-index: 100;
+    pointer-events: none;
 }
 
 .front-section {
@@ -32,7 +62,7 @@ html, body {
     position: fixed;
     right: 2.5%;
     bottom: -10%;
-    cursor: pointer;
+    /* cursor: pointer; */
     background-color: black;
     padding: 10px 11px;
     border-radius: 50%;
@@ -68,7 +98,6 @@ html, body {
     radial-gradient(6px 6px at 3209px 193px, #fff, transparent);
     background-size: 650px 650px;
     animation: snow 9s linear infinite;
-    transition: 5s all;
 }
 
 .snowA:after {
@@ -114,6 +143,7 @@ nav ul {
     list-style: none;
     gap: 2px;
     display: flex;
+    cursor: none;
 }
 nav ul li a {
     padding: 8px 18px;
@@ -121,9 +151,9 @@ nav ul li a {
     font-size: 18.5px;
     text-decoration: none;
     transition:  300ms ease;
+    cursor: none;
 }
 nav ul li a:hover {
-    cursor: pointer;
     color: var(--text-col);
 }
 
@@ -151,6 +181,7 @@ nav ul .active-page {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    cursor: none;
 }
 
 #search-input {
@@ -274,6 +305,7 @@ nav ul .active-page {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;  
+    cursor: none;
 }
 .logo img {
     width: 70px;
@@ -341,6 +373,7 @@ nav ul .active-page {
     display: flex;
 }
 .contact-me-btn a {
+    cursor: none;
     color: var(--font-color);
     text-decoration: none;
     padding: 12px 28px;
@@ -373,7 +406,7 @@ nav ul .active-page {
     background-color: var(--font-color);
 }
 .social-icons div i {
-    cursor: pointer;
+    /* cursor: pointer; */
     font-size: 25px;
 }
 .fb-logo, .twitter-logo, .insta-logo, .github-logo {
@@ -478,7 +511,7 @@ nav ul .active-page {
     justify-items: center;
     gap: 20px;
     transition: 300ms ease-out;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .skills-box:hover {
     background-color: var(--font-color);
@@ -605,7 +638,7 @@ nav ul .active-page {
 .pr-flip-box {
     width: 20rem;
     perspective: 1000px;
-    cursor: pointer;
+    /* cursor: pointer; */
     height: 97%;
 }
 
@@ -740,7 +773,7 @@ nav ul .active-page {
     gap: 14px;
     width: fit-content;
     transition: 0.1s ease-out;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .contact i {
     color: white;
@@ -772,10 +805,6 @@ nav ul .active-page {
 .footer-social-icons div i {
     font-size: 23px;
 }
-.footer-social-icons div {
-    cursor: pointer;
-}
-
 
 .last-empty-div {
     width: 100%;
