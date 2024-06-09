@@ -28,7 +28,8 @@ html, body {
     width: 15.5px;
     height: 15.5px;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 1.5px solid white;
+    mix-blend-mode: difference;
     z-index: 100;
     transition: 0.2s ease-out;
     pointer-events: none;
@@ -47,6 +48,7 @@ html, body {
     border-radius: 50%;
     z-index: 100;
     pointer-events: none;
+    mix-blend-mode: difference;
 }
 
 .front-section {
