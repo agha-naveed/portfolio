@@ -85,6 +85,9 @@ html, body {
     bottom: 3.5%;
 }
 /* ========== Snow Falling =========== */
+.snow {
+    max-height: 100vh;
+}
 .snowA, .snowA::before, .snowA::after {
     content: "";
     z-index: 1;
@@ -101,15 +104,17 @@ html, body {
 }
 
 .snowA:after {
-    margin-left: -250px;background-size: 650px 650px;
+    margin-left: -250px;
+    background-size: 650px 650px;
     opacity: 0.5;
     filter: blur(2px);
-    animation-duration: 5s;
+    animation-duration: 7s;
 }
 
 .snowA:before {
     margin-left: -350px;
-    opacity: 0.7;background-size: 650px 650px;
+    opacity: 0.7;
+    background-size: 650px 650px;
     filter: blur(2.5px);
     animation-duration: 6s;
 }
@@ -153,7 +158,7 @@ nav ul li a {
     transition:  300ms ease;
     cursor: none;
 }
-nav ul li a:hover {
+nav ul li a:hover { 
     color: var(--text-col);
 }
 

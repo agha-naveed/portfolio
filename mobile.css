@@ -139,9 +139,6 @@
         gap: 0;
         row-gap: 0;
     }
-    .fl-box-front, .fl-box-rear {
-        /* height: auto; */
-    }
     .pr-flip-box {
         width: 60%;
     }
@@ -185,6 +182,20 @@
 @media only screen and (max-width: 720px) {
     .pr-mid-line {
         display: none;
+    }
+    .snowA,
+    .snowA::after {
+        background-image: 
+        radial-gradient(4px 4px at 100px 50px, #fff , transparent),
+        radial-gradient(6px 6px at 319px 400px, #fff, transparent);
+    }
+    .snowA::before {
+        animation-duration: 12s;
+        background-image: radial-gradient(6px 6px at 549px 330px, #fff, transparent);
+        filter: blur(2px);
+    }
+    .snowA::after{
+        filter: blur(4px);
     }
 }
 
