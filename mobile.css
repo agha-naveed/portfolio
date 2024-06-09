@@ -5,6 +5,9 @@
 }
 
 @media only screen and (max-width: 1020px) {
+    .cursor-div {
+        display: none;
+    }
     .btn-shine {
         display: none;
     }
