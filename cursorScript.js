@@ -1,6 +1,4 @@
-// Custom Cursor
 let cursor = document.getElementById('cursor')
-// let cursorBorder = document.getElementById('cursor-border')
 let cursorBorder = document.querySelector('.cursor-border')
 
 window.onmousemove = (e) => {
