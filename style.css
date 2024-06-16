@@ -518,10 +518,10 @@ nav ul .active-page {
     opacity: 0;
 }
 .skills-row:nth-child(1) {
-    transform: translateX(-20%);
+    transform: translateX(-50px);
 }
 .skills-row:nth-child(2) {
-    transform: translateX(20%);
+    transform: translateX(50px);
 }
 
 .skills-box {
