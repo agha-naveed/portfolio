@@ -1,3 +1,5 @@
+var mainBody = document.querySelector('.main-body')
+
 let searchBtn = document.querySelector('.resp-search-box')
 let respSearch = document.querySelector('.resp-search')
 let searchCloseBtn = document.querySelector('.search-close-btn')
@@ -109,4 +111,40 @@ window.addEventListener('scroll', (e) => {
 
 upArrowBtn.onclick = () => {
     window.location.href = '#start'
+}
+
+let projectDetails = document.querySelector('.project-details')
+let flipBox = document.querySelectorAll('.pr-flip-box')[0]
+let libManag = document.querySelector('.lib_management')
+let closeProjectDiv = document.querySelector('.close-project-div')
+
+
+let lib_p_des = document.querySelector('.lib_management > .p-description')
+let lib_p_img = document.querySelector('.lib_management > .p-images')
+
+flipBox.onclick = () => {
+    projectDetails.style.width = '100%'
+    mainBody.style.display = 'none'
+    libManag.style.display = 'flex'
+    setTimeout(() => {
+        lib_p_des.classList.add('opaque')
+    }, 400)
+    setTimeout(() => {
+        lib_p_img.classList.add('opaque')
+    }, 200)
+}
+closeProjectDiv.onclick = () => {
+    setTimeout(() => {
+        lib_p_des.classList.remove('opaque')
+    }, 200)
+    setTimeout(() => {
+        lib_p_img.classList.remove('opaque')
+    }, 400)
+    
+    setTimeout(() => {
+        mainBody.style.display = 'block'
+        projectDetails.style.width = 0
+        libManag.style.display = 'none'
+    }, 1200)
+    
 }

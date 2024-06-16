@@ -18,7 +18,7 @@ html, body {
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
-    cursor: none;
+    /* cursor: none; */
 }
 /* Scroll Bar */
 ::-webkit-scrollbar {
@@ -47,12 +47,13 @@ html, body {
     border-radius: 50%;
     border: 1.5px solid white;
     mix-blend-mode: difference;
-    z-index: 100;
+    z-index: 1000;
     transition: 0.2s ease-out;
     pointer-events: none;
 }
 .cursor-large {
-    padding: 30px !important;
+    padding: 28px !important;
+    border: 2.5px solid white;
 }
 .cursor-small {
     padding: 10px;
@@ -63,7 +64,7 @@ html, body {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    z-index: 100;
+    z-index: 1000;
     pointer-events: none;
     mix-blend-mode: difference;
 }
@@ -783,6 +784,10 @@ nav ul .active-page {
     gap: 20px;
     justify-items: center;
 }
+.c-links a {
+    text-decoration: none;
+    cursor: none;
+}
 .c-links .div {
     display: flex;
     gap: 15px;
@@ -796,7 +801,6 @@ nav ul .active-page {
     gap: 14px;
     width: fit-content;
     transition: 0.1s ease-out;
-    /* cursor: pointer; */
 }
 .contact i {
     color: white;
@@ -845,6 +849,61 @@ nav ul .active-page {
 }
 
 /* ========== Footer Contact Me Finished ========== */
+
+
+/* ========== Projects Overlay ========== */
+.project-details {
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    overflow: auto;
+}
+.lib_management {
+    display: flex;
+    display: none;
+    background-color: rgb(5, 0, 17);
+}
+.p-description {
+    transition: 1s all;
+    padding: 40px;
+    color: white;
+    position: fixed;
+    width: 35vw;
+    right: -4%;
+    background-color: #0e0e0e;
+    height: 100%;
+    opacity: 0;
+}
+.opaque {
+    opacity: 1 !important;
+    right: 10px !important;
+}
+.p-description i {
+    background-color: var(--font-color);
+    color: var(--bg-col);
+    padding: 6px 7px;
+    border-radius: 50%;
+}
+.p-description h1 {
+    font-size: 28px;
+    margin: 30px 0;
+}
+.p-description p {
+    width: 100%;
+}
+.p-images {
+    transition: 1s all;
+    width: 65vw;
+    position: relative;
+    right: -4%;
+    opacity: 0;
+}
+.p-images-collection img {
+    width: 100%;
+}
 
 /* ------- Global Classes -------- */
 
