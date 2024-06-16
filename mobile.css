@@ -18,6 +18,7 @@
     .front-section {
         display: grid;
         gap: 60px;
+        overflow: hidden;
     }
     .navbar {
         top: -30px;

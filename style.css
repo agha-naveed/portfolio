@@ -513,17 +513,16 @@ nav ul .active-page {
     justify-content: center;
     gap: 20px;
     position: relative;
-    transition: 0.5s ease-out;
+    transition: 0.7s ease-out;
     width: 100%;
     opacity: 0;
 }
 .skills-row:nth-child(1) {
-    transform: translateX(-100%);
+    transform: translateX(-20%);
 }
 .skills-row:nth-child(2) {
-    transform: translateX(100%);
+    transform: translateX(20%);
 }
-
 
 .skills-box {
     border-radius: 12px;
@@ -857,8 +856,8 @@ nav ul .active-page {
 }
 
 .r-show {
-    opacity: 1 !important;
     transform: translateX(0) !important;
+    opacity: 1 !important;
 }
 .m-b-100 {
     margin-bottom: 100px;

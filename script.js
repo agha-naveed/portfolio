@@ -53,30 +53,34 @@ githubLogo.forEach(elem => {
 });
 
 
-let skillsRow1 = document.querySelectorAll('.skills-row')[0]
-let skillsRow2 = document.querySelectorAll('.skills-row')[1]
+let skillsRow1 = document.querySelectorAll('.skills-row')[0];
+let skillsRow2 = document.querySelectorAll('.skills-row')[1];
+
+let ticking = false;
 
 function checkBoxes() {
     const triggerBottom = window.innerHeight / 5 * 4;
-
     const boxTop = skillsRow1.getBoundingClientRect().top;
-
-    if(boxTop < triggerBottom && boxTop > -200) {
-        
-            skillsRow1.classList.add('r-show')
-            skillsRow2.classList.add('r-show')
-        
+    if (boxTop < triggerBottom && boxTop > -200) {
+        skillsRow1.classList.add('r-show');
+        skillsRow2.classList.add('r-show');
     }
-    
     else {
-        skillsRow1.classList.remove('r-show')
-        skillsRow2.classList.remove('r-show')
-    }
+        skillsRow1.classList.remove('r-show');
+        skillsRow2.classList.remove('r-show');
+   }
+    ticking = false;
 }
 
+function onScroll() {
+    if (!ticking) {
+        window.requestAnimationFrame(checkBoxes);
+        ticking = true;
+    }
+}
+  
+window.addEventListener('scroll', onScroll);
 
-checkBoxes()
-window.addEventListener('scroll', checkBoxes)
 
 const myPic = document.querySelector('.my-pic > img')
 const myDetails = document.querySelector('.front-details')
@@ -85,7 +89,6 @@ window.addEventListener('mousemove', (e) => {
     myPic.style.right = (e.clientX / 100) + 'px'
     myDetails.style.left = (e.clientX / 100) + 'px'
 })
-
 
 
 const upArrowBtn = document.querySelector('.up-arrow-btn')
