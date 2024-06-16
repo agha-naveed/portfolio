@@ -18,7 +18,7 @@ html, body {
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
-    /* cursor: none; */
+    cursor: none;
 }
 /* Scroll Bar */
 ::-webkit-scrollbar {
@@ -864,7 +864,7 @@ nav ul .active-page {
 .lib_management, .twitter_clone, .pass_strength, .weather_app {
     transition: 1s all;
     display: none;
-    background-color: rgb(5, 0, 17);
+    background-color: #0e0e0e;
 }
 .p-description {
     transition: 0.5s all;
@@ -913,6 +913,12 @@ nav ul .active-page {
     position: relative;
     right: -4%;
     opacity: 0;
+}
+.p-images-collection {
+    display: grid;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
 }
 .p-images-collection img {
     width: 100%;

@@ -178,6 +178,16 @@
     .c-me, .c-heading, .c-footer {
         width: 100%;
     }
+
+
+    /* Project Details */
+    .project-details div {
+        flex-direction: column;
+        width: 100%;
+    }
+    .p-description {
+        position: relative;
+    }
 }
 
 @media only screen and (max-width: 720px) {
