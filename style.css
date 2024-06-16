@@ -861,13 +861,13 @@ nav ul .active-page {
     height: 100%;
     overflow: auto;
 }
-.lib_management {
-    display: flex;
+.lib_management, .twitter_clone, .pass_strength, .weather_app {
+    transition: 1s all;
     display: none;
     background-color: rgb(5, 0, 17);
 }
 .p-description {
-    transition: 1s all;
+    transition: 0.5s all;
     padding: 40px;
     color: white;
     position: fixed;
@@ -877,9 +877,14 @@ nav ul .active-page {
     height: 100%;
     opacity: 0;
 }
-.opaque {
+.show-f-right {
     opacity: 1 !important;
     right: 10px !important;
+}
+.show-f-top {
+    opacity: 1 !important;
+    top: 0px !important;
+    bottom: 0px !important;
 }
 .p-description i {
     background-color: var(--font-color);
@@ -888,14 +893,22 @@ nav ul .active-page {
     border-radius: 50%;
 }
 .p-description h1 {
+    transition: 1s ease-out;
     font-size: 28px;
     margin: 30px 0;
+    position: relative;
+    bottom: 50px;
+    opacity: 0;
 }
 .p-description p {
+    transition: 1s ease-out;
     width: 100%;
+    position: relative;
+    top: 50px;
+    opacity: 0;
 }
 .p-images {
-    transition: 1s all;
+    transition: 0.5s all;
     width: 65vw;
     position: relative;
     right: -4%;

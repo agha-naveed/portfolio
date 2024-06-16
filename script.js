@@ -114,37 +114,152 @@ upArrowBtn.onclick = () => {
 }
 
 let projectDetails = document.querySelector('.project-details')
-let flipBox = document.querySelectorAll('.pr-flip-box')[0]
+let flipBox = document.querySelectorAll('.pr-flip-box')
 let libManag = document.querySelector('.lib_management')
-let closeProjectDiv = document.querySelector('.close-project-div')
+let twitterClone = document.querySelector('.twitter_clone')
+let passwordStrength = document.querySelector('.pass_strength')
+let weatherApp = document.querySelector('.weather-app')
+let closeProjectDiv = document.querySelectorAll('.close-project-div')
 
-
+// ---------- Library Management Project Items ----------
 let lib_p_des = document.querySelector('.lib_management > .p-description')
+let lib_p_des_p = document.querySelector('.lib_management > .p-description > p')
+let lib_p_des_h = document.querySelector('.lib_management > .p-description > h1')
 let lib_p_img = document.querySelector('.lib_management > .p-images')
 
-flipBox.onclick = () => {
+// ---------- Twitter Clone Project Items ----------
+let twitter_p_des = document.querySelector('.twitter_clone > .p-description')
+let twitter_p_des_p = document.querySelector('.twitter_clone > .p-description > p')
+let twitter_p_des_h = document.querySelector('.twitter_clone > .p-description > h1')
+let twitter_p_img = document.querySelector('.twitter_clone > .p-images')
+
+// ---------- Password Strength Project Items ----------
+let passStrength_p_des = document.querySelector('.pass_strength > .p-description')
+let passStrength_p_des_p = document.querySelector('.pass_strength > .p-description > p')
+let passStrength_p_des_h = document.querySelector('.pass_strength > .p-description > h1')
+let passStrength_p_img = document.querySelector('.pass_strength > .p-images')
+
+// ---------- Live Weather App Project Items ----------
+let weatherApp_p_des = document.querySelector('.weather_app > .p-description')
+let weatherApp_p_des_p = document.querySelector('.weather_app > .p-description > p')
+let weatherApp_p_des_h = document.querySelector('.weather_app > .p-description > h1')
+let weatherApp_p_img = document.querySelector('.weather_app > .p-images')
+
+flipBox[0].addEventListener('click', () => {
     projectDetails.style.width = '100%'
     mainBody.style.display = 'none'
     libManag.style.display = 'flex'
-    setTimeout(() => {
-        lib_p_des.classList.add('opaque')
-    }, 400)
-    setTimeout(() => {
-        lib_p_img.classList.add('opaque')
-    }, 200)
-}
-closeProjectDiv.onclick = () => {
-    setTimeout(() => {
-        lib_p_des.classList.remove('opaque')
-    }, 200)
-    setTimeout(() => {
-        lib_p_img.classList.remove('opaque')
-    }, 400)
     
     setTimeout(() => {
-        mainBody.style.display = 'block'
-        projectDetails.style.width = 0
-        libManag.style.display = 'none'
-    }, 1200)
-    
+        lib_p_img.classList.add('show-f-right')
+    }, 200)
+    setTimeout(() => {
+        lib_p_des.classList.add('show-f-right')
+    }, 400)
+
+    setTimeout(() => {
+        lib_p_des_p.classList.add('show-f-top')
+        lib_p_des_h.classList.add('show-f-top')
+    }, 700)
 }
+ ) 
+
+flipBox[1].addEventListener('click', () => {
+    console.log('Hello')
+    projectDetails.style.width = '100%'
+    mainBody.style.display = 'none'
+    twitterClone.style.display = 'flex'
+    
+    setTimeout(() => {
+        twitter_p_img.classList.add('show-f-right')
+    }, 200)
+    setTimeout(() => {
+        twitter_p_des.classList.add('show-f-right')
+    }, 400)
+
+    setTimeout(() => {
+        twitter_p_des_p.classList.add('show-f-top')
+        twitter_p_des_h.classList.add('show-f-top')
+    }, 700)
+})
+
+flipBox[2].addEventListener('click', () => {
+    console.log('Hello')
+    projectDetails.style.width = '100%'
+    mainBody.style.display = 'none'
+    passwordStrength.style.display = 'flex'
+    
+    setTimeout(() => {
+        passStrength_p_img.classList.add('show-f-right')
+    }, 200)
+    setTimeout(() => {
+        passStrength_p_des.classList.add('show-f-right')
+    }, 400)
+
+    setTimeout(() => {
+        passStrength_p_des_p.classList.add('show-f-top')
+        passStrength_p_des_h.classList.add('show-f-top')
+    }, 700)
+})
+
+flipBox[3].addEventListener('click', () => {
+    console.log('Hello')
+    projectDetails.style.width = '100%'
+    mainBody.style.display = 'none'
+    weatherApp.style.display = 'flex'
+    
+    setTimeout(() => {
+        weatherApp_p_img.classList.add('show-f-right')
+    }, 200)
+    setTimeout(() => {
+        weatherApp_p_des.classList.add('show-f-right')
+    }, 400)
+
+    setTimeout(() => {
+        weatherApp_p_des_p.classList.add('show-f-top')
+        weatherApp_p_des_h.classList.add('show-f-top')
+    }, 700)
+})
+
+
+
+closeProjectDiv.forEach(elem => {
+    elem.onclick = () => {
+        setTimeout(() => {
+            lib_p_des_p.classList.remove('show-f-top')
+            lib_p_des_h.classList.remove('show-f-top')
+
+            twitter_p_des_p.classList.remove('show-f-top')
+            twitter_p_des_h.classList.remove('show-f-top')
+            
+            passStrength_p_des_p.classList.remove('show-f-top')
+            passStrength_p_des_h.classList.remove('show-f-top')
+            
+            weatherApp_p_des_p.classList.remove('show-f-top')
+            weatherApp_p_des_h.classList.remove('show-f-top')
+        }, 300)
+
+        setTimeout(() => {
+            lib_p_des.classList.remove('show-f-right')
+            twitter_p_des.classList.remove('show-f-right')
+            passStrength_p_des.classList.remove('show-f-right')
+            weatherApp_p_des.classList.remove('show-f-right')
+        }, 500)
+        setTimeout(() => {
+            lib_p_img.classList.remove('show-f-right')
+            twitter_p_img.classList.remove('show-f-right')
+            passStrength_p_img.classList.remove('show-f-right')
+            weatherApp_p_img.classList.remove('show-f-right')
+        }, 700)
+        
+        setTimeout(() => {
+            mainBody.style.display = 'block'
+            projectDetails.style.width = 0
+            libManag.style.display = 'none'
+            twitterClone.style.display = 'none'
+            passwordStrength.style.display = 'none'
+            weatherApp.style.display = 'none'
+        }, 1600)
+    }
+
+})
