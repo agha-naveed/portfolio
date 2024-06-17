@@ -118,6 +118,7 @@ let twitterClone = document.querySelector('.twitter_clone')
 let passwordStrength = document.querySelector('.otp_gen')
 let weatherApp = document.querySelector('.weather_app')
 let closeProjectDiv = document.querySelectorAll('.close-project-div')
+const root = document.documentElement;
 
 // Function to handle flipBox click
 function handleFlipBoxClick(index) {
@@ -129,15 +130,25 @@ function handleFlipBoxClick(index) {
         project.style.display = 'flex';
         
         setTimeout(() => {
-            project.querySelector('.p-images').classList.add('show-f-right');
+            projectDetails.classList.remove('pr-details-hide')
         }, 200);
         setTimeout(() => {
+            root.style.setProperty('--padding', 0);
+            project.querySelector('.p-images').classList.add('show-f-right');
+        }, 700);
+        setTimeout(() => {
             project.querySelector('.p-description').classList.add('show-f-right');
-        }, 400);
+            project.querySelector('.p-animation').style.left = '5%'
+            project.querySelector('.p-animation').style.width = '90%'
+        }, 900);
+        setTimeout(() => {
+            project.querySelector('.p-animation').style.left = '100%'
+            project.querySelector('.p-animation').style.width = 0
+        }, 1600);
         setTimeout(() => {
             project.querySelector('.p-description > .p_para').classList.add('show-f-top');
-            project.querySelector('.p-description > h1').classList.add('show-f-top');
-        }, 700);
+            project.querySelector('.p-description > .p-animation-div > h1').classList.add('show-f-top');
+        }, 1700);
 
         mouseY = e.clientY;
         currentScroll = window.scrollY;
@@ -153,19 +164,26 @@ flipBox.forEach((box, index) => {
 function handleCloseProjectDivClick() {
     setTimeout(() => {
         document.querySelectorAll('.p-description > .p_para').forEach(elem => elem.classList.remove('show-f-top'));
-        document.querySelectorAll('.p-description > h1').forEach(elem => elem.classList.remove('show-f-top'));
+        document.querySelectorAll('.p-description > .p-animation-div > h1').forEach(elem => elem.classList.remove('show-f-top'));
     }, 300);
 
     setTimeout(() => {
         document.querySelectorAll('.p-description').forEach(elem => elem.classList.remove('show-f-right'));
         document.querySelectorAll('.p-images').forEach(elem => elem.classList.remove('show-f-right'));
+        root.style.setProperty('--padding', '120px');
     }, 500);
     setTimeout(() => {
-        document.body.style.overflow = 'auto'
-        projectDetails.style.width = 0;
         [libManag, twitterClone, passwordStrength, weatherApp].forEach(project => project.style.display = 'none');
         window.scrollTo(0, scrollPosition); // Restore scroll position
     }, 1120);
+
+    setTimeout(() => {
+        projectDetails.classList.add('pr-details-hide')
+        document.body.style.overflow = 'auto'
+    }, 1180);
+    setTimeout(() => {
+        projectDetails.style.width = 0;
+    }, 1400);
 }
 
 // Add click event listeners for close project div elements

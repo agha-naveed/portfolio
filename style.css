@@ -6,6 +6,7 @@
     --grayish-col: #9A9B9C;
     --font-color: #FFC86B;
     --bg2-col: #3D3E42;
+    --padding: 120px;
 }
 
 * {
@@ -20,18 +21,14 @@ html, body {
     scroll-behavior: smooth;
     cursor: none;
 }
-/* Scroll Bar */
 ::-webkit-scrollbar {
     width: 10px;
     background-color: rgb(26, 26, 26);
 }
 ::-webkit-scrollbar-track {
-    /* box-shadow: inset 0 0 5px grey;  */
     border-radius: 10px;
     background-color: rgb(26, 26, 26);
 }
-   
-  /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--font-color); 
     border-radius: 10px;
@@ -852,20 +849,35 @@ nav ul .active-page {
 
 
 /* ========== Projects Overlay ========== */
+.pr-details-hide {
+    right: -100% !important;
+}
 .project-details {
+    display: flex;
     position: fixed;
+    right: 0;
     top: 0;
     z-index: 200;
-    justify-content: center;
-    align-items: center;
+    background-color: #0e0e0e;
     height: 100%;
     overflow-y: auto;
+    transition: 0.7s ease;
     overflow-x: hidden;
+}
+.project-details::before {
+    content: '';
+    position: relative;
+    z-index: -1;
+    display: block;
+    padding: var(--padding);
+    transition: 0.5s ease-out;
+    background-color: var(--font-color);
+    /* width: 400px; */
+    height: 100%;
 }
 .lib_management, .twitter_clone, .otp_gen, .weather_app {
     transition: 1s all;
     display: none;
-    background-color: #0e0e0e;
     flex-direction: row-reverse;
 }
 .p-description {
@@ -875,7 +887,7 @@ nav ul .active-page {
     position: relative;
     width: 35vw;
     right: -4%;
-    background-color: #0e0e0e;
+    /* background-color: #0e0e0e; */
     height: 100%;
     opacity: 0;
 }
@@ -894,10 +906,10 @@ nav ul .active-page {
     padding: 6px 7px;
     border-radius: 50%;
 }
-.p-description h1 {
+.p-description .p-animation-div h1 {
     transition: 1s ease-out;
     font-size: 28px;
-    margin: 30px 0;
+    /* margin: 30px 0; */
     position: relative;
     bottom: 50px;
     opacity: 0;
@@ -925,7 +937,7 @@ nav ul .active-page {
 
 .p-images {
     transition: 0.5s all;
-    width: 65vw;
+    width: 62vw;
     position: relative;
     right: -4%;
     opacity: 0;
@@ -940,6 +952,20 @@ nav ul .active-page {
     width: 100%;
 }
 
+
+.p-animation-div {
+    margin: 30px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.p-animation {
+    transition: 0.6s ease-out;
+    width: 0;
+    position: absolute;
+    left: -100%;
+    height: 40px;
+    background-color: var(--font-color);
+}
 /* ------- Global Classes -------- */
 
 .h-line {
