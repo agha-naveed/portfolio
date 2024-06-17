@@ -147,12 +147,9 @@ let weatherApp_p_img = document.querySelector('.weather_app > .p-images')
 
 
 
-
-
-
 flipBox[0].addEventListener('click', (e) => {
     projectDetails.style.width = '100%'
-    mainBody.style.display = 'none'
+    document.body.style.overflow = 'hidden'
     libManag.style.display = 'flex'
     
     setTimeout(() => {
@@ -174,7 +171,7 @@ flipBox[0].addEventListener('click', (e) => {
 })
 
 flipBox[1].addEventListener('click', () => {
-    console.log('Hello')
+    document.body.style.overflow = 'hidden'
     projectDetails.style.width = '100%'
     mainBody.style.display = 'none'
     twitterClone.style.display = 'flex'
@@ -193,7 +190,7 @@ flipBox[1].addEventListener('click', () => {
 })
 
 flipBox[2].addEventListener('click', () => {
-    console.log('Hello')
+    document.body.style.overflow = 'hidden'
     projectDetails.style.width = '100%'
     mainBody.style.display = 'none'
     passwordStrength.style.display = 'flex'
@@ -212,6 +209,7 @@ flipBox[2].addEventListener('click', () => {
 })
 
 flipBox[3].addEventListener('click', () => {
+    document.body.style.overflow = 'hidden'
     projectDetails.style.width = '100%'
     mainBody.style.display = 'none'
     weatherApp.style.display = 'flex'
@@ -261,7 +259,7 @@ closeProjectDiv.forEach(elem => {
         }, 700)
         
         setTimeout(() => {
-            mainBody.style.display = 'block'
+            document.body.style.overflow = 'auto'
             projectDetails.style.width = 0
             libManag.style.display = 'none'
             twitterClone.style.display = 'none'

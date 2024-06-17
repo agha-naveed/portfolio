@@ -859,18 +859,20 @@ nav ul .active-page {
     justify-content: center;
     align-items: center;
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .lib_management, .twitter_clone, .pass_strength, .weather_app {
     transition: 1s all;
     display: none;
     background-color: #0e0e0e;
+    flex-direction: row-reverse;
 }
 .p-description {
     transition: 0.5s all;
     padding: 40px;
     color: white;
-    position: fixed;
+    position: relative;
     width: 35vw;
     right: -4%;
     background-color: #0e0e0e;
