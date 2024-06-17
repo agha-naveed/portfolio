@@ -174,7 +174,6 @@ function handleCloseProjectDivClick() {
     }, 500);
     setTimeout(() => {
         [libManag, twitterClone, passwordStrength, weatherApp].forEach(project => project.style.display = 'none');
-        window.scrollTo(0, scrollPosition); // Restore scroll position
     }, 1120);
 
     setTimeout(() => {

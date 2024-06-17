@@ -304,6 +304,9 @@
         font-size: 10px;
     }
 
+    .project-details::before {
+        padding: 0;
+    }
     
 }
 

@@ -887,8 +887,6 @@ nav ul .active-page {
     position: relative;
     width: 35vw;
     right: -4%;
-    /* background-color: #0e0e0e; */
-    height: 100%;
     opacity: 0;
 }
 .show-f-right {
