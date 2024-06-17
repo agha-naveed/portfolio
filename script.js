@@ -115,7 +115,7 @@ let projectDetails = document.querySelector('.project-details')
 let flipBox = document.querySelectorAll('.pr-flip-box')
 let libManag = document.querySelector('.lib_management')
 let twitterClone = document.querySelector('.twitter_clone')
-let passwordStrength = document.querySelector('.pass_strength')
+let passwordStrength = document.querySelector('.otp_gen')
 let weatherApp = document.querySelector('.weather_app')
 let closeProjectDiv = document.querySelectorAll('.close-project-div')
 

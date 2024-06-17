@@ -862,7 +862,7 @@ nav ul .active-page {
     overflow-y: auto;
     overflow-x: hidden;
 }
-.lib_management, .twitter_clone, .pass_strength, .weather_app {
+.lib_management, .twitter_clone, .otp_gen, .weather_app {
     transition: 1s all;
     display: none;
     background-color: #0e0e0e;
