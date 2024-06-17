@@ -1,5 +1,3 @@
-var mainBody = document.querySelector('.main-body')
-
 let searchBtn = document.querySelector('.resp-search-box')
 let respSearch = document.querySelector('.resp-search')
 let searchCloseBtn = document.querySelector('.search-close-btn')
@@ -121,173 +119,11 @@ let passwordStrength = document.querySelector('.pass_strength')
 let weatherApp = document.querySelector('.weather_app')
 let closeProjectDiv = document.querySelectorAll('.close-project-div')
 
-// ---------- Library Management Project Items ----------
-let lib_p_des = document.querySelector('.lib_management > .p-description')
-let lib_p_des_p = document.querySelector('.lib_management > .p-description > .p_para')
-let lib_p_des_h = document.querySelector('.lib_management > .p-description > h1')
-let lib_p_img = document.querySelector('.lib_management > .p-images')
-
-// ---------- Twitter Clone Project Items ----------
-let twitter_p_des = document.querySelector('.twitter_clone > .p-description')
-let twitter_p_des_p = document.querySelector('.twitter_clone > .p-description > .p_para')
-let twitter_p_des_h = document.querySelector('.twitter_clone > .p-description > h1')
-let twitter_p_img = document.querySelector('.twitter_clone > .p-images')
-
-// ---------- Password Strength Project Items ----------
-let passStrength_p_des = document.querySelector('.pass_strength > .p-description')
-let passStrength_p_des_p = document.querySelector('.pass_strength > .p-description > .p_para')
-let passStrength_p_des_h = document.querySelector('.pass_strength > .p-description > h1')
-let passStrength_p_img = document.querySelector('.pass_strength > .p-images')
-
-// ---------- Live Weather App Project Items ----------
-let weatherApp_p_des = document.querySelector('.weather_app > .p-description')
-let weatherApp_p_des_p = document.querySelector('.weather_app > .p-description > .p_para')
-let weatherApp_p_des_h = document.querySelector('.weather_app > .p-description > h1')
-let weatherApp_p_img = document.querySelector('.weather_app > .p-images')
-
-
-
-flipBox[0].addEventListener('click', (e) => {
-    projectDetails.style.width = '100%'
-    document.body.style.overflow = 'hidden'
-    libManag.style.display = 'flex'
-    
-    setTimeout(() => {
-        lib_p_img.classList.add('show-f-right')
-    }, 200)
-    setTimeout(() => {
-        lib_p_des.classList.add('show-f-right')
-    }, 400)
-
-    setTimeout(() => {
-        lib_p_des_p.classList.add('show-f-top')
-        lib_p_des_h.classList.add('show-f-top')
-    }, 700)
-
-    
-    mouseY = e.clientY;
-    currentScroll = window.scrollY;
-    scrollPosition = currentScroll + mouseY;
-})
-
-flipBox[1].addEventListener('click', () => {
-    document.body.style.overflow = 'hidden'
-    projectDetails.style.width = '100%'
-    mainBody.style.display = 'none'
-    twitterClone.style.display = 'flex'
-    
-    setTimeout(() => {
-        twitter_p_img.classList.add('show-f-right')
-    }, 200)
-    setTimeout(() => {
-        twitter_p_des.classList.add('show-f-right')
-    }, 400)
-
-    setTimeout(() => {
-        twitter_p_des_p.classList.add('show-f-top')
-        twitter_p_des_h.classList.add('show-f-top')
-    }, 700)
-})
-
-flipBox[2].addEventListener('click', () => {
-    document.body.style.overflow = 'hidden'
-    projectDetails.style.width = '100%'
-    mainBody.style.display = 'none'
-    passwordStrength.style.display = 'flex'
-    
-    setTimeout(() => {
-        passStrength_p_img.classList.add('show-f-right')
-    }, 200)
-    setTimeout(() => {
-        passStrength_p_des.classList.add('show-f-right')
-    }, 400)
-
-    setTimeout(() => {
-        passStrength_p_des_p.classList.add('show-f-top')
-        passStrength_p_des_h.classList.add('show-f-top')
-    }, 700)
-})
-
-flipBox[3].addEventListener('click', () => {
-    document.body.style.overflow = 'hidden'
-    projectDetails.style.width = '100%'
-    mainBody.style.display = 'none'
-    weatherApp.style.display = 'flex'
-    
-    setTimeout(() => {
-        weatherApp_p_img.classList.add('show-f-right')
-    }, 200)
-    setTimeout(() => {
-        weatherApp_p_des.classList.add('show-f-right')
-    }, 400)
-
-    setTimeout(() => {
-        weatherApp_p_des_p.classList.add('show-f-top')
-        weatherApp_p_des_h.classList.add('show-f-top')
-    }, 700)
-})
-
-
-
-closeProjectDiv.forEach(elem => {
-    elem.onclick = () => {
-        setTimeout(() => {
-            lib_p_des_p.classList.remove('show-f-top')
-            lib_p_des_h.classList.remove('show-f-top')
-
-            twitter_p_des_p.classList.remove('show-f-top')
-            twitter_p_des_h.classList.remove('show-f-top')
-            
-            passStrength_p_des_p.classList.remove('show-f-top')
-            passStrength_p_des_h.classList.remove('show-f-top')
-            
-            weatherApp_p_des_p.classList.remove('show-f-top')
-            weatherApp_p_des_h.classList.remove('show-f-top')
-        }, 300)
-
-        setTimeout(() => {
-            lib_p_des.classList.remove('show-f-right')
-            twitter_p_des.classList.remove('show-f-right')
-            passStrength_p_des.classList.remove('show-f-right')
-            weatherApp_p_des.classList.remove('show-f-right')
-        }, 500)
-        setTimeout(() => {
-            lib_p_img.classList.remove('show-f-right')
-            twitter_p_img.classList.remove('show-f-right')
-            passStrength_p_img.classList.remove('show-f-right')
-            weatherApp_p_img.classList.remove('show-f-right')
-        }, 700)
-        
-        setTimeout(() => {
-            document.body.style.overflow = 'auto'
-            projectDetails.style.width = 0
-            libManag.style.display = 'none'
-            twitterClone.style.display = 'none'
-            passwordStrength.style.display = 'none'
-            weatherApp.style.display = 'none'
-            
-        }, 1600)
-    }
-})
-
-
-
-
-/*
-// Assuming this is at the top of your script.js file
-var mainBody = document.querySelector('.main-body');
-var scrollPosition = 0;
-var mouseY = 0;
-var currentScroll = 0;
-
-let flipBox = document.querySelectorAll('.pr-flip-box');
-let closeProjectDiv = document.querySelectorAll('.close-project-div');
-
 // Function to handle flipBox click
 function handleFlipBoxClick(index) {
     return function(e) {
         projectDetails.style.width = '100%';
-        mainBody.style.display = 'none';
+        document.body.style.overflow = 'hidden'
         
         let project = [libManag, twitterClone, passwordStrength, weatherApp][index];
         project.style.display = 'flex';
@@ -299,7 +135,7 @@ function handleFlipBoxClick(index) {
             project.querySelector('.p-description').classList.add('show-f-right');
         }, 400);
         setTimeout(() => {
-            project.querySelector('.p-description > p').classList.add('show-f-top');
+            project.querySelector('.p-description > .p_para').classList.add('show-f-top');
             project.querySelector('.p-description > h1').classList.add('show-f-top');
         }, 700);
 
@@ -314,10 +150,9 @@ flipBox.forEach((box, index) => {
     box.addEventListener('click', handleFlipBoxClick(index));
 });
 
-// Function to handle close project div click
 function handleCloseProjectDivClick() {
     setTimeout(() => {
-        document.querySelectorAll('.p-description > p').forEach(elem => elem.classList.remove('show-f-top'));
+        document.querySelectorAll('.p-description > .p_para').forEach(elem => elem.classList.remove('show-f-top'));
         document.querySelectorAll('.p-description > h1').forEach(elem => elem.classList.remove('show-f-top'));
     }, 300);
 
@@ -326,15 +161,14 @@ function handleCloseProjectDivClick() {
         document.querySelectorAll('.p-images').forEach(elem => elem.classList.remove('show-f-right'));
     }, 500);
     setTimeout(() => {
-        mainBody.style.display = 'block';
+        document.body.style.overflow = 'auto'
         projectDetails.style.width = 0;
         [libManag, twitterClone, passwordStrength, weatherApp].forEach(project => project.style.display = 'none');
         window.scrollTo(0, scrollPosition); // Restore scroll position
-    }, 1600);
+    }, 1120);
 }
 
 // Add click event listeners for close project div elements
 closeProjectDiv.forEach(elem => {
     elem.addEventListener('click', handleCloseProjectDivClick);
 });
-*/
