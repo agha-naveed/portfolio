@@ -123,25 +123,25 @@ let closeProjectDiv = document.querySelectorAll('.close-project-div')
 
 // ---------- Library Management Project Items ----------
 let lib_p_des = document.querySelector('.lib_management > .p-description')
-let lib_p_des_p = document.querySelector('.lib_management > .p-description > p')
+let lib_p_des_p = document.querySelector('.lib_management > .p-description > .p_para')
 let lib_p_des_h = document.querySelector('.lib_management > .p-description > h1')
 let lib_p_img = document.querySelector('.lib_management > .p-images')
 
 // ---------- Twitter Clone Project Items ----------
 let twitter_p_des = document.querySelector('.twitter_clone > .p-description')
-let twitter_p_des_p = document.querySelector('.twitter_clone > .p-description > p')
+let twitter_p_des_p = document.querySelector('.twitter_clone > .p-description > .p_para')
 let twitter_p_des_h = document.querySelector('.twitter_clone > .p-description > h1')
 let twitter_p_img = document.querySelector('.twitter_clone > .p-images')
 
 // ---------- Password Strength Project Items ----------
 let passStrength_p_des = document.querySelector('.pass_strength > .p-description')
-let passStrength_p_des_p = document.querySelector('.pass_strength > .p-description > p')
+let passStrength_p_des_p = document.querySelector('.pass_strength > .p-description > .p_para')
 let passStrength_p_des_h = document.querySelector('.pass_strength > .p-description > h1')
 let passStrength_p_img = document.querySelector('.pass_strength > .p-images')
 
 // ---------- Live Weather App Project Items ----------
 let weatherApp_p_des = document.querySelector('.weather_app > .p-description')
-let weatherApp_p_des_p = document.querySelector('.weather_app > .p-description > p')
+let weatherApp_p_des_p = document.querySelector('.weather_app > .p-description > .p_para')
 let weatherApp_p_des_h = document.querySelector('.weather_app > .p-description > h1')
 let weatherApp_p_img = document.querySelector('.weather_app > .p-images')
 
