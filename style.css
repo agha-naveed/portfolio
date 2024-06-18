@@ -665,8 +665,15 @@ nav ul .active-page {
     overflow: hidden;
     --op: 0;
 }
-
-
+.pr-flip-box:nth-child(2):hover::before {
+    opacity: 0.3;
+}
+.pr-flip-box:nth-child(3):hover::before {
+    opacity: 0.3;
+}
+.pr-flip-box:nth-child(4):hover::before {
+    opacity: 0.2;
+}
 .pr-flip-box::before {
     content: '';
     position: absolute;

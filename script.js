@@ -190,7 +190,6 @@ closeProjectDiv.forEach(elem => {
     elem.addEventListener('click', handleCloseProjectDivClick);
 });
 
-
 flipBox.forEach(flip_1 => {
     flip_1.addEventListener('mousemove', (e) => {
         flip_1.style.scale = 1.1
