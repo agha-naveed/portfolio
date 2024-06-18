@@ -655,38 +655,41 @@ nav ul .active-page {
 
 .pr-flip-box {
     width: 20rem;
-    perspective: 1000px;
-    /* cursor: pointer; */
     height: 97%;
+    --shine-x: 50%;
+    --shine-y: 50%;
+    transition: transform 0.02s ease, box-shadow 0.1s ease, scale 0.4s ease;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    position: relative;
+    overflow: hidden;
+    --op: 0;
 }
 
-.pr-flip-box:nth-child(1) {
-    transform: rotate(-10deg);
-}
-.pr-flip-box:nth-child(3) {
-    transform: rotate(-5deg);
+
+.pr-flip-box::before {
+    content: '';
+    position: absolute;
+    z-index: 100;
+    top: var(--shine-y);
+    left: var(--shine-x);
+    width: 200%;
+    height: 200%;
+    /* mix-blend-mode: screen; */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.925), rgba(255, 255, 255, 0.288) 55%);
+    opacity: var(--op);
+    transform: translate(-50%, -50%);
+    transition: opacity 0.1s ease, transform 0;
 }
 
-.pr-flip-box:nth-child(2) {
-    transform: rotate(-5deg);
-}
-.pr-flip-box:nth-child(4) {
-    transform: rotate(10deg);
-}
 
 .flip-box-inner {
-    /* border-radius: 10px; */
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    /* background-color: var(--font-color); */
-}
-
-.pr-flip-box:hover .flip-box-inner {
-    transform: rotateY(180deg);
 }
 .pr-flip-box:hover .flip-box-inner span {
     left: 0;

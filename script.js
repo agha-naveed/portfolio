@@ -189,3 +189,35 @@ function handleCloseProjectDivClick() {
 closeProjectDiv.forEach(elem => {
     elem.addEventListener('click', handleCloseProjectDivClick);
 });
+
+
+flipBox.forEach(flip_1 => {
+    flip_1.addEventListener('mousemove', (e) => {
+        flip_1.style.scale = 1.1
+        flip_1.style.setProperty('--op', 0.1)
+        const rect = flip_1.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Calculate the rotation values based on mouse position
+        const rotateX = ((y / rect.height) - 0.5) * 40; // Adjust the multiplier for desired effect
+        const rotateY = ((x / rect.width) - 0.5) * -40; // Adjust the multiplier for desired effect
+
+        // Apply the transform
+        flip_1.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${-1 * rotateY}deg)`;
+        const shineX = ((x / rect.width) * 100).toFixed(2);
+        const shineY = ((y / rect.height) * 100).toFixed(2);
+
+        // Update the position of the pseudo-element to simulate sunlight
+        flip_1.style.setProperty('--shine-x', `${shineX}%`);
+        flip_1.style.setProperty('--shine-y', `${shineY}%`);
+    });
+
+    flip_1.addEventListener('mouseleave', () => {
+        flip_1.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+        flip_1.style.scale = 1
+        flip_1.style.setProperty('--shine-x', `0`);
+        flip_1.style.setProperty('--shine-y', `0`);
+        flip_1.style.setProperty('--op', 0)
+    });
+})
