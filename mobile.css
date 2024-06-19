@@ -144,7 +144,7 @@
         width: 60%;
     }
 
-    .pr-flip-box:nth-child(2) {
+    /* .pr-flip-box:nth-child(2) {
         position: relative;
         top: -20px;
         left: -60px;
@@ -158,7 +158,7 @@
         position: relative;
         top: -80px;
         left: -60px;
-    }
+    } */
 
     .flip-box-back-side span h2 {
         font-size: 18px;

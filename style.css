@@ -49,7 +49,7 @@ html, body {
     pointer-events: none;
 }
 .cursor-large {
-    padding: 28px !important;
+    padding: 25px !important;
     border: 2.5px solid white;
 }
 .cursor-small {
@@ -565,6 +565,7 @@ nav ul .active-page {
 .project-body {
     width: 60%;
     display: grid;
+    justify-content: center;
     gap: 35px;
 }
 .pr-heading h1 {
@@ -643,6 +644,7 @@ nav ul .active-page {
 .pr-boxes {
     display: flex;
     justify-content: center;
+    place-self: center;
 }
 .pr-images {
     width: 100%;
@@ -664,6 +666,12 @@ nav ul .active-page {
     position: relative;
     overflow: hidden;
     --op: 0;
+}
+.pr-box-title {
+    position: absolute;
+    z-index: 2000;
+    color: white;
+    left: -20px;
 }
 .pr-flip-box:nth-child(2):hover::before {
     opacity: 0.3;
@@ -688,46 +696,10 @@ nav ul .active-page {
     transform: translate(-50%, -50%);
     transition: opacity 0.1s ease, transform 0;
 }
-
-
-.flip-box-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-.pr-flip-box:hover .flip-box-inner span {
-    left: 0;
-    opacity: 1;
-}
-.flip-box-front-side, .flip-box-back-side {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-.flip-box-back-side span {
-    position: relative;
-    top: -70%;
-    left: -100px;
-    opacity: 0;
-    transition: 0.7s ease;
-}
 .flip-box-front-side {
     color: black;
 }
-
-.flip-box-back-side {
-    position: absolute;
-    top: 0;
-    color: white;
-    transform: rotateY(180deg);
-}
-
-.fl-box-front, .fl-box-rear {
+.fl-box-front {
     outline: 5px solid var(--grayish-col);
     width: 100%;
     height: -webkit-fill-available;
@@ -841,6 +813,7 @@ nav ul .active-page {
     width: 100%;
     height: 80px;
     align-content: end;
+    align-content: flex-end;
     background-color: var(--bg-col);
     position: relative;
     z-index: 5;
@@ -952,6 +925,7 @@ nav ul .active-page {
     gap: 100px;
     justify-content: center;
     align-items: center;
+    padding: 20px 0 0 30px;
 }
 .p-images-collection img {
     width: 100%;
