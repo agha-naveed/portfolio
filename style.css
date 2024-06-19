@@ -695,6 +695,8 @@ nav ul .active-page {
     transition: opacity 0.1s ease, transform 0;
 }
 .flip-box-front-side {
+    position: relative;
+    z-index: 1;
     color: black;
 }
 .fl-box-front {
@@ -944,29 +946,6 @@ nav ul .active-page {
     background-color: var(--font-color);
 }
 /* ------- Global Classes -------- */
-
-.loader {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    border: 3px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 3px solid #3498db;
-    animation: spin 1s linear infinite;
-    display: none; /* Hide loader by default */
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {transform: rotate(360deg);
-    }
-}
-
 .h-line {
     width: 110px;
     height: 3.5px;
