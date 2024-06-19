@@ -25,3 +25,8 @@ document.addEventListener('mousemove', function(e) {
     }
   });
 
+
+function imageLoader() {
+    var loader = document.getElementById('loader');
+    loader.style.display = 'block';
+}
