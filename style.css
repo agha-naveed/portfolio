@@ -459,7 +459,7 @@ nav ul .active-page {
 /* ========== Header Center Finished ========== */
 
 /* ========== About & Skills ========== */
-.about-skills-section {
+.about-section, .skills-section {
     display: grid;
     justify-content: center;
     background-color: var(--bg2-col);
