@@ -132,6 +132,10 @@
         width: 95%;
     }
     
+    ::-webkit-scrollbar {
+        width: 0;
+    }
+
 }
 @media only screen and (max-width: 950px) {
     .pr-images {
@@ -299,7 +303,7 @@
     }
     .menu-inner-search {
         display: flex;
-    }
+    }   
 
     .contact-me-btn a {
         padding: 10px 20px;
