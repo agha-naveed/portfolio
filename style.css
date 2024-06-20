@@ -659,7 +659,7 @@ nav ul .active-page {
     height: 97%;
     --shine-x: 50%;
     --shine-y: 50%;
-    transition: transform 0.02s ease, box-shadow 0.1s ease, scale 0.4s ease;
+    transition: box-shadow 0.1s ease, scale 0.4s ease;
     transform-style: preserve-3d;
     transform: perspective(1000px);
     position: relative;

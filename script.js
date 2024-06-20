@@ -207,7 +207,7 @@ flipBox.forEach(flip_1 => {
         const rotateY = ((x / rect.width) - 0.5) * -40; // Adjust the multiplier for desired effect
 
         // Apply the transform
-        flip_1.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${-1 * rotateY}deg)`;
+        flip_1.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${ rotateY}deg)`;
         const shineX = ((x / rect.width) * 100).toFixed(2);
         const shineY = ((y / rect.height) * 100).toFixed(2);
 
