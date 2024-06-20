@@ -197,7 +197,10 @@ flipBox.forEach(flip_1 => {
         const rect = flip_1.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-
+    
+        // Box-Shadow
+        flip_1.style.boxShadow = `0 20px 25px rgba(0, 0, 0, 0.425)`
+    
         // Calculate the rotation values based on mouse position
         const rotateX = ((y / rect.height) - 0.5) * 40; // Adjust the multiplier for desired effect
         const rotateY = ((x / rect.width) - 0.5) * -40; // Adjust the multiplier for desired effect
@@ -218,5 +221,6 @@ flipBox.forEach(flip_1 => {
         flip_1.style.setProperty('--shine-x', `0`);
         flip_1.style.setProperty('--shine-y', `0`);
         flip_1.style.setProperty('--op', 0)
+        flip_1.style.boxShadow = ``
     });
 })

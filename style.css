@@ -665,12 +665,7 @@ nav ul .active-page {
     overflow: hidden;
     --op: 0;
 }
-.pr-box-title {
-    position: absolute;
-    z-index: 2000;
-    color: white;
-    left: -20px;
-}
+
 .pr-flip-box:nth-child(2):hover::before {
     opacity: 0.3;
 }
