@@ -2,6 +2,18 @@
     .pr-images {
         gap: 1vw;
     }
+    .sp-name h1 {
+        font-size: 45px;
+    }
+    .sp-name h2 {
+        font-size: 20px;
+    }
+    .sp-profession h2 {
+        font-size: 26px;
+    }
+    .contact-me-btn a {
+        font-size: 18px;
+    }
 }
 
 @media only screen and (max-width: 1020px) {

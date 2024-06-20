@@ -383,7 +383,7 @@ nav ul .active-page {
     color: var(--font-color);
     font-size: 55px;
 }
-.front-details .sp-profession h2 {
+.sp-profession h2 {
     color: var(--text-col);
     font-weight: 300;
     font-size: 32px;
@@ -536,13 +536,15 @@ nav ul .active-page {
 .skills-box:hover p {
     color: var(--bg2-col);
 }
+.skills-box:hover img {
+    filter: drop-shadow(2px 6px 2px rgba(0, 0, 0, 0.527));
+}
 .skills-box p {
     color: var(--text-col);
     font-size: 18px;
 }
 .skills-box img {
     width: 30%;
-    
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
