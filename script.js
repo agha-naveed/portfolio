@@ -53,6 +53,7 @@ githubLogo.forEach(elem => {
 });
 
 
+
 let skillsRow1 = document.querySelectorAll('.skills-row')[0];
 let skillsRow2 = document.querySelectorAll('.skills-row')[1];
 

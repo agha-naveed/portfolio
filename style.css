@@ -470,6 +470,7 @@ nav ul .active-page {
 }
 .about-sec {
     width: 65%;
+    margin: 40px 0;
 }
 .about-sec h1 {
     color: var(--text-col);
@@ -952,8 +953,8 @@ nav ul .active-page {
     transform: translateX(0) !important;
     opacity: 1 !important;
 }
-.m-t-40 {
-    margin-top: 40px;
+.m-b-40 {
+    margin-bottom: 40px;
 }
 .m-b-100 {
     margin-bottom: 100px;
