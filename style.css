@@ -390,22 +390,55 @@ nav ul .active-page {
 }
 .front-details .contact-me-btn {
     display: flex;
+    position: relative;
+    align-content: center;
+    justify-items: left;
+    display: grid;
+    gap: 20px;
+    width: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 300ms linear;
+    transition-delay: 0.3s;
 }
+
 .contact-me-btn a {
-    cursor: none;
     color: var(--font-color);
+    cursor: none;
     text-decoration: none;
     padding: 12px 28px;
-    font-size: 22px;
-    font-weight: 500;
     border: 5px solid var(--font-color);
     border-radius: 10px;
-    transition: 0.1s ease-out;
+    font-size: 22px;
+    position: relative;
+    z-index: 200;
+    transition: 0.2s linear;
+    transition-delay: 0.5s;
+    font-weight: 500;
+    overflow: hidden;
+    position: relative;
+    z-index: 2000;
+}
+
+.contact-me-btn a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 200.98px;
+    height: 260.98px;
+    border-radius: 50%;
+    transform: scale(1) translateY(20px) translateX(-100px);
+    transition: transform 1s cubic-bezier(.66, .00, .34, 1.00);
+    background-color: var(--font-color);
+    overflow: hidden;
+}
+
+.contact-me-btn a:hover::after {
+    transform: scale(1.5) translateY(-100px) translateX(0);
 }
 .contact-me-btn a:hover {
-    background-color: var(--font-color);
-    color: var(--bg-col);
-    box-shadow: 0 0 15px var(--font-color);
+    color: var(--bg2-col);
 }
 
 .social-icons {
@@ -517,11 +550,6 @@ nav ul .active-page {
 .skills-row:nth-child(2) {
     transform: translateX(50px);
 }
-
-
-
-
-
 
 .skills-box {
     position: relative;
@@ -791,6 +819,7 @@ nav ul .active-page {
     gap: 15px;
 }
 .c-links .contact {
+    position: relative;
     display: flex;
     background-color: var(--bg-col);
     border-radius: 8px;
@@ -799,19 +828,41 @@ nav ul .active-page {
     gap: 14px;
     width: fit-content;
     transition: 0.1s ease-out;
+    transition: 300ms ease-out;
+    overflow: hidden;
 }
 .contact i {
     color: white;
     font-size: 20px;
     transition: 0.1s ease-out;
+    position: relative;
+    z-index: 200;
+    transition: 0.1s ease-out;
+    transition-delay: 0.44s;
 }
 .contact p {
     color: var(--font-color);
     font-size: 18px;
+    position: relative;
+    z-index: 200;
     transition: 0.1s ease-out;
+    transition-delay: 0.44s;
 }
-.contact:hover {
+.contact::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 200.98px;
+    height: 260.98px;
+    border-radius: 50%;
+    transform: scale(1) translateY(170px) translateX(-20px);
+    transition: transform 1s cubic-bezier(.66, .00, .34, 1.00);
     background-color: var(--font-color);
+    overflow: hidden;
+}
+
+.contact:hover::after {
+    transform: scale(2) translateY(0px);
 }
 .contact:hover p {
     color: var(--bg-col);
@@ -909,7 +960,6 @@ nav ul .active-page {
 .p-description .p-animation-div h1 {
     transition: 1s ease-out;
     font-size: 28px;
-    /* margin: 30px 0; */
     position: relative;
     bottom: 50px;
     opacity: 0;
