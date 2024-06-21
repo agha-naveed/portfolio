@@ -518,7 +518,13 @@ nav ul .active-page {
     transform: translateX(50px);
 }
 
+
+
+
+
+
 .skills-box {
+    position: relative;
     border-radius: 12px;
     background-color: #313233;
     width: 200px;
@@ -528,31 +534,49 @@ nav ul .active-page {
     justify-items: center;
     gap: 20px;
     transition: 300ms ease-out;
-    /* cursor: pointer; */
+    overflow: hidden;
 }
-.skills-box:hover {
+.skills-box p {
+    font-size: 18px;
+    color: var(--text-col);
+    position: relative;
+    z-index: 200;
+    transition: 0.1s all;
+    transition-delay: 0.44s;
+    font-weight: 300;
+}
+.skills-box::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 200.98px;
+    height: 260.98px;
+    border-radius: 50%;
+    transform: scale(1) translateY(300px) translateX(-100px);
+    transition: transform 1s cubic-bezier(.66, .00, .34, 1.00);
     background-color: var(--font-color);
+    overflow: hidden;
+}
+
+.skills-box:hover::after {
+    transform: scale(1.5) translateY(0px);
+    color: white;
 }
 .skills-box:hover p {
     color: var(--bg2-col);
 }
-.skills-box:hover img {
-    filter: drop-shadow(2px 6px 2px rgba(0, 0, 0, 0.527));
-}
-.skills-box p {
-    color: var(--text-col);
-    font-size: 18px;
-}
+
 .skills-box img {
     width: 30%;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    position: relative;
+    z-index: 200;
 }
 
 /* ========== About & Skills Finished ========== */
-
 
 /* ========== Project Section Finished ========== */
 .project-section {
