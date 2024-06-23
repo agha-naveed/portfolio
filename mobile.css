@@ -128,8 +128,8 @@
     }
 
     .skills-box {
-        width: 20vmin;
-        height: 20vmin;
+        width: 120px;
+        height: 120px;
     }
 
     .project-body {
@@ -221,6 +221,10 @@
     }
     .social-icons {
         display: none;
+    }
+    .skills-box {
+        width: 92px;
+        height: 92px;
     }
     .skills-box p {
         font-size: 12px;

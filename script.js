@@ -12,6 +12,7 @@ searchCloseBtn.onclick = () => {
 let menuBtn = document.querySelector('.menu-bar > .menu-open-bar')
 let menuCloseBtn = document.querySelector('.menu-bar > .menu-close-btn')
 let menu = document.querySelector('.menu-search > ul')
+let menuOptions = document.querySelectorAll('.menu-search > ul > li')
 
 menuBtn.addEventListener('click', () => {
     menu.classList.add('r-show')
@@ -23,6 +24,16 @@ menuCloseBtn.addEventListener('click', () => {
     menu.classList.remove('r-show')
     menuCloseBtn.classList.remove('r-show')
     menuCloseBtn.style.right = 0
+})
+
+menuOptions.forEach(elem => {
+    elem.onclick = () => {
+        if(elem.className != "menu-inner-search") {
+            menu.classList.remove('r-show')
+            menuCloseBtn.classList.remove('r-show')
+            menuCloseBtn.style.right = 0
+        }
+    }
 })
 
 
