@@ -585,13 +585,16 @@ nav ul .active-page {
     background-color: var(--font-color);
     overflow: hidden;
 }
-
+.skills-box:hover img {
+    filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.452));
+}
 .skills-box:hover::after {
     transform: scale(1.5) translateY(0px);
     color: white;
 }
 .skills-box:hover p {
     color: var(--bg2-col);
+    filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.452));
 }
 
 .skills-box img {
@@ -602,6 +605,8 @@ nav ul .active-page {
     -ms-user-select: none;
     position: relative;
     z-index: 200;
+    transition: 0.2s all;
+    transition-delay: 0.44s;
 }
 
 /* ========== About & Skills Finished ========== */
