@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
 :root {
     --bg-col: #272829;
     --text-col: white;
@@ -889,7 +889,7 @@ nav ul .active-page {
 
 .last-empty-div {
     width: 100%;
-    height: 80px;
+    height: 93px;
     align-content: end;
     align-content: flex-end;
     background-color: var(--bg-col);
