@@ -194,7 +194,6 @@ nav ul .active-page {
     outline: none;
     font-size: 22px;
     padding: 12px 20px;
-    border-radius: 12px;
     transition: 0.2s linear;
     user-select: none;
     -moz-user-select: none;
@@ -206,6 +205,7 @@ nav ul .active-page {
 #search-input {
     width: 65%;
     height: 56px;
+    border-radius: 12px;
 }
 #search-input:focus {
     width: 90%;
@@ -409,6 +409,7 @@ nav ul .active-page {
     padding: 12px 28px;
     border: 5px solid var(--font-color);
     border-radius: 10px;
+    outline: none;
     font-size: 22px;
     position: relative;
     z-index: 200;
@@ -664,10 +665,10 @@ nav ul .active-page {
 .pr-date {
     clip-path: polygon(0% 20%, 76% 20%, 100% 50%, 76% 80%, 0% 80%);
     background-color: var(--bg2-col);
-    width: 102px;
+    /* width: 102px; */
     height: 72px;
     align-content: center;
-    padding: 10px 27px;
+    padding: 18px 27px;
 }
 .pr-date p {
     font-size: 23.5px;
@@ -890,13 +891,14 @@ nav ul .active-page {
 .last-empty-div {
     width: 100%;
     height: 93px;
-    align-content: end;
-    align-content: flex-end;
     background-color: var(--bg-col);
     position: relative;
     z-index: 5;
 }
 .last-empty-div p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     font-size: 15px;
     text-align: center;
     margin-bottom: 10px;
