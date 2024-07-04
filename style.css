@@ -665,7 +665,7 @@ nav ul .active-page {
 .pr-date {
     clip-path: polygon(0% 20%, 76% 20%, 100% 50%, 76% 80%, 0% 80%);
     background-color: var(--bg2-col);
-    /* width: 102px; */
+    width: 102px;
     height: 72px;
     align-content: center;
     padding: 18px 27px;
@@ -752,7 +752,7 @@ nav ul .active-page {
 }
 .flip-box-front-side {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     color: black;
 }
 .fl-box-front {
@@ -1052,4 +1052,29 @@ nav ul .active-page {
 
 .p-section {
     padding: 40px 80px;
+}
+
+
+.loader {
+    border: 4px solid rgb(255, 255, 255);
+    border-left-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+    animation: spin-loader 1s linear infinite;
+}
+  
+  
+@keyframes spin-loader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
