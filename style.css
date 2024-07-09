@@ -815,9 +815,6 @@ nav ul .active-page {
     color: var(--text-col);
 }
 .c-links {
-    transform: translateY(30px);
-    transition: 0.5s ease;
-    opacity: 0;
     display: grid;
     gap: 20px;
     justify-items: center;
