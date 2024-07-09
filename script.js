@@ -242,35 +242,3 @@ flipBox.forEach(flip_1 => {
         flip_1.style.boxShadow = ``
     });
 })
-
-
-
-
-
-
-
-
-// Skills Boxes Animations
-let contactLinks = document.querySelector('.c-links')
-let ticking1 = false;
-
-function checkSkillsBoxes() {
-    const triggerBottom  = window.innerHeight / 5 * 4;
-    const boxTop = contactLinks.getBoundingClientRect().top;
-    if (boxTop < triggerBottom && boxTop > -200) {
-        contactLinks.classList.add('r-show');
-    }
-    else {
-        contactLinks.classList.remove('r-show');
-   }
-    ticking1 = false;
-}
-
-function onScrollSkillsBox() {
-    if (!ticking1) {
-        window.requestAnimationFrame(checkSkillsBoxes);
-        ticking1 = true;
-    }
-}
-  
-window.addEventListener('scroll', onScrollSkillsBox);
