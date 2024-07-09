@@ -38,6 +38,7 @@ menuOptions.forEach(elem => {
 
 
 let fbLogo = document.querySelectorAll('.fb-logo')
+let linkedinLogo = document.querySelectorAll('.linkedin-logo')
 let twitterLogo = document.querySelectorAll('.twitter-logo')
 let instaLogo = document.querySelectorAll('.insta-logo')
 let githubLogo = document.querySelectorAll('.github-logo')
@@ -45,6 +46,11 @@ let githubLogo = document.querySelectorAll('.github-logo')
 fbLogo.forEach(elem => {
     elem.addEventListener('click', () => {
         window.open('https://facebook.com/naveedbalti31', 'Facebook Page', 'width=900, height=900').moveBy(200, 200)
+    })
+});
+linkedinLogo.forEach(elem => {
+    elem.addEventListener('click', () => {
+        window.open('https://linkedin.com/in/agha-naveed', 'Linkedin Page', 'width=900, height=900').moveBy(200, 200)
     })
 });
 twitterLogo.forEach(elem => {
@@ -236,3 +242,35 @@ flipBox.forEach(flip_1 => {
         flip_1.style.boxShadow = ``
     });
 })
+
+
+
+
+
+
+
+
+// Skills Boxes Animations
+let contactLinks = document.querySelector('.c-links')
+let ticking1 = false;
+
+function checkSkillsBoxes() {
+    const triggerBottom  = window.innerHeight / 5 * 4;
+    const boxTop = contactLinks.getBoundingClientRect().top;
+    if (boxTop < triggerBottom && boxTop > -200) {
+        contactLinks.classList.add('r-show');
+    }
+    else {
+        contactLinks.classList.remove('r-show');
+   }
+    ticking1 = false;
+}
+
+function onScrollSkillsBox() {
+    if (!ticking1) {
+        window.requestAnimationFrame(checkSkillsBoxes);
+        ticking1 = true;
+    }
+}
+  
+window.addEventListener('scroll', onScrollSkillsBox);
