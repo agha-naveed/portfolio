@@ -14,14 +14,26 @@
     <link rel="stylesheet" href="mobile.css" />
     
 </head>
-<body>
+<body onload="loadingFunction()">
     
+        <!-- Loader -->
+        <div class="loader-bg">
+            <div class="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+
     <div class="root">
         <div class="cursor-div">
             <div id="cursor-border" class="cursor-border cursor-small"></div>
             <div id="cursor"></div>
         </div>
 
+        <!-- ========= Main Body ========= -->
         <div class="main-body">
 
             <div class="up-arrow-btn">
@@ -226,7 +238,6 @@
                             <div class="pr-images">
 
                                 <div aria-label="Libray Management Project" class="pr-flip-box">
-                                    <!-- <div class="loader"></div> -->
                                     <div class="flip-box-front-side">
                                         <img decoding="async" loading="lazy" src="img/f-box-library.webp" alt="" class="fl-box-front" />
                                     </div>

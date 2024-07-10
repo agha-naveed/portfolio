@@ -1,3 +1,14 @@
+var pageShowingVar;
+function loadingFunction() {
+    pageShowingVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+    document.querySelector(".loader-bg").style.display = "none";
+    document.querySelector('.root').style.display = "block";
+}
+
+
 let searchBtn = document.querySelector('.resp-search-box')
 let respSearch = document.querySelector('.resp-search')
 let searchCloseBtn = document.querySelector('.search-close-btn')
