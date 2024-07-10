@@ -41,54 +41,84 @@ html, body {
 .loader-bg {
     width: 100%;
     height: 100%;
-    background-color: var(--bg2-col);
+    background-color: rgb(24, 24, 24);
     z-index: 200;
     position: absolute;
     display: grid;
     justify-content: center;
     align-items: center;
 }
-.loader {
-    /* position: absolute; */
-    --color: #a5a5b0;
-    --size: 30px;
-    width: var(--size);
-    height: var(--size);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-}
-
-.loader span {
-    width: var(--size);
-    height: var(--size);
-    border: 1px solid var(--color);
-    border-radius: 5px;
-    animation: keyframes-rotate 2s alternate infinite ease-in-out;
-}
-
-.loader span:nth-child(1) {
-    animation-delay: 0ms;
-}
-
-.loader span:nth-child(2) {
-    animation-delay: 50ms;
-}
-
-.loader span:nth-child(3) {
-    animation-delay: 100ms;
-}
-
-.loader span:nth-child(4) {
-    animation-delay: 150ms;
-}
+.cube-loader {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+  }
   
-@keyframes keyframes-rotate {
-    50% {
-        transform: rotate(360deg);
+  .cube {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: #333;
+    border: 2px solid #fff;
+    animation: foldCube 2.4s infinite linear;
+  }
+  
+  /* Individual cube positioning */
+  .cube1 {
+    top: 0;
+    left: 0;
+    transform-origin: 100% 100%;
+  }
+  .cube2 {
+    top: 0;
+    right: 0;
+    transform-origin: 0 100%;
+  }
+  .cube3 {
+    bottom: 0;
+    right: 0;
+    transform-origin: 0 0;
+  }
+  .cube4 {
+    bottom: 0;
+    left: 0;
+    transform-origin: 100% 0;
+  }
+  
+  /* Keyframes for the folding animation */
+  @keyframes foldCube {
+    0%,
+    10% {
+      transform: perspective(140px) rotateX(-180deg);
+      opacity: 0;
     }
-}
+    25%,
+    75% {
+      transform: perspective(140px) rotateX(0deg);
+      opacity: 1;
+    }
+    90%,
+    100% {
+      transform: perspective(140px) rotateY(180deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Animation delay for each cube */
+  .cube1 {
+    animation-delay: 0.3s;
+  }
+  .cube2 {
+    animation-delay: 0.6s;
+  }
+  .cube3 {
+    animation-delay: 0.9s;
+  }
+  .cube4 {
+    animation-delay: 1.2s;
+  }
+  
 
 
 

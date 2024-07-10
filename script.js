@@ -1,12 +1,31 @@
-var pageShowingVar;
-function loadingFunction() {
-    pageShowingVar = setTimeout(showPage, 1000);
-}
+document.addEventListener("DOMContentLoaded", function() {
 
-function showPage() {
-    document.querySelector(".loader-bg").style.display = "none";
-    document.querySelector('.root').style.display = "block";
-}
+    window.addEventListener("load", function() {
+        // All resources are loaded
+        var loader = document.querySelector(".loader-bg");
+        var content = document.querySelector(".root");
+
+        // Hide loader
+        loader.style.display = "none";
+
+        // Show content
+        content.style.display = "block";
+    });
+
+})
+
+
+
+
+var pageShowingVar;
+// function loadingFunction() {
+//     pageShowingVar = setTimeout(showPage, 1000);
+// }
+
+// function showPage() {
+//     document.querySelector(".loader-bg").style.display = "none";
+//     document.querySelector('.root').style.display = "block";
+// }
 
 
 let searchBtn = document.querySelector('.resp-search-box')
