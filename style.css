@@ -876,11 +876,11 @@ nav ul .active-page {
 .c-me {
     display: grid;
     gap: 30px;
-    width: 98.2%;
+    width: 98%;
 }
 
 .c-heading , .c-footer{
-    width: 98.2%;
+    width: 98%;
     z-index: 12;
     position: relative;
     display: flex;
