@@ -159,8 +159,8 @@
     .pr-flip-box {
         width: 60%;
     }
-    .c-me, .c-heading, .c-footer {
-        width: 98%;
+    .c-heading, .c-footer {
+        width: 93%;
     }
 }
 

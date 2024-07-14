@@ -872,11 +872,12 @@ nav ul .active-page {
     z-index: 10;
     background-color: var(--bg2-col);
     place-items: center;
+    justify-content: center;
 }
 .c-me {
     display: grid;
     gap: 30px;
-    width: 98%;
+    width: 100%;
 }
 
 .c-heading , .c-footer{
@@ -892,14 +893,15 @@ nav ul .active-page {
 }
 .c-footer {
     top: 13px;
+    gap: 40px;
 }
 .l-line, .r-line {
-    width: 38vw;
+    width: 40%;
     background-color: var(--font-color);
     height: 3px;
 }
 .l-line-2, .r-line-2 {
-    width: 39.8vw;
+    width: 40vw;
     background-color: var(--font-color);
     height: 3px;
 }
