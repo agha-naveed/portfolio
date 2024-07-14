@@ -901,7 +901,7 @@ nav ul .active-page {
     height: 3px;
 }
 .l-line-2, .r-line-2 {
-    width: 40vw;
+    width: 35vw;
     background-color: var(--font-color);
     height: 3px;
 }
