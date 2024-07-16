@@ -1214,22 +1214,32 @@ nav ul .active-page {
     color: white;
     list-style-type: circle;
 }
+.pr-on-hover {
+    position: relative;
+}
 .other-pr-details a {
     color: var(--text-col);
     text-decoration: none;
     cursor: none;
     position: relative;
     z-index: 20;
+    transition: 0.2s ease-out;
 }
 
 .on-hover-img {
     z-index: 20;
-    position: absolute;
+    position: fixed;
     /* width: 180px; */
-    opacity: 1;
+    display: none;
+    /* opacity: 1; */
     height: 120px;
     transform: translateX(20px) translateY(20px);
     transition: 0.2s ease-out;
+}
+
+.pr-hover-text {
+    color: var(--font-color) !important;
+    margin-left: 10px;
 }
 
 /* ========== Other Project Finished ========== */
