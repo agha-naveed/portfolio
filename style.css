@@ -1200,7 +1200,6 @@ nav ul .active-page {
     font-size: 17px;
     color: var(--font-color);
 }
-
 .other-pr-details {
     display: grid;
     grid-template-columns: auto auto;
@@ -1209,7 +1208,7 @@ nav ul .active-page {
 .pr-col {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     color: white;
     list-style-type: circle;
 }
@@ -1227,23 +1226,20 @@ nav ul .active-page {
 }
 
 .on-hover-img {
-    z-index: 20;
-    position: fixed;
-    display: none;
-    height: 120px;
-    transform: translateX(60px) translateY(20px);
-    opacity: 0;
-    transition: 1s ease;
-}
-
-.pr-hover-reveal {
-    display: block !important;
-    transform: translateX(20px) translateY(20px) !important;
-    opacity: 1 !important;
+    position: fixed; 
+    width: 0;
+    height: 120px; 
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    transform: translate(20px, 20px);
+    transition: width 0.24s ease-in-out;
 }
 .pr-hover-text {
     color: var(--font-color) !important;
     margin-left: 10px;
+    
 }
 
 

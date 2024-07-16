@@ -147,19 +147,28 @@ upArrowBtn.onclick = () => {
 const projectHover = document.querySelectorAll('.pr-on-hover')
 
 projectHover.forEach(elem => {
+    let img = elem.querySelector('.on-hover-img');
+
+    elem.addEventListener('mouseenter', () => {
+        img.style.width = '213.333px';
+    })
+    elem.addEventListener('mouseleave', () => {
+        img.style.width = 0;
+    })
+
     elem.querySelector('a').addEventListener('mousemove', e => {
-        elem.querySelector('.on-hover-img').classList.add('pr-hover-reveal')
-        elem.querySelector('.on-hover-img').style.left = e.clientX + 'px'
-        elem.querySelector('.on-hover-img').style.top = e.clientY + 'px'
+        img.style.left = e.clientX + 'px'
+        img.style.top = e.clientY + 'px'
         elem.querySelector('a').classList.add('pr-hover-text')
     })
     elem.querySelector('a').addEventListener('mouseleave', e => {
-        elem.querySelector('.on-hover-img').style.display = 'none'
+        // img.style.width = 0
         elem.querySelector('a').classList.remove('pr-hover-text')
-        elem.querySelector('.on-hover-img').classList.remove('pr-hover-reveal')
     })
 
 })
+
+
 
 // ---------------- Text Project Hover Ended -------------------
 
