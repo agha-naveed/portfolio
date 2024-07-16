@@ -759,14 +759,6 @@ nav ul .active-page {
     color: var(--font-color);
 }
 
-.on-hover-img {
-    position: fixed;
-    /* width: 180px; */
-    opacity: 1;
-    height: 120px;
-    transform: translateX(20px) translateY(20px);
-    transition: 0.2s ease-out;
-}
 
 .pr-date {
     clip-path: polygon(0% 20%, 76% 20%, 100% 50%, 76% 80%, 0% 80%);
@@ -1191,7 +1183,9 @@ nav ul .active-page {
 
 /* ========== Project Overlay Finished ========== */
 
+
 /* ========== Other Project ========== */
+
 .other-projects {
     background-color: var(--bg-col);
     width: 100%;
@@ -1224,8 +1218,19 @@ nav ul .active-page {
     color: var(--text-col);
     text-decoration: none;
     cursor: none;
+    position: relative;
+    z-index: 20;
 }
 
+.on-hover-img {
+    z-index: 20;
+    position: absolute;
+    /* width: 180px; */
+    opacity: 1;
+    height: 120px;
+    transform: translateX(20px) translateY(20px);
+    transition: 0.2s ease-out;
+}
 
 /* ========== Other Project Finished ========== */
 

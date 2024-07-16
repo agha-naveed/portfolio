@@ -144,20 +144,16 @@ upArrowBtn.onclick = () => {
 
 // ---------------- Text Project Hover -------------------
 
-const lib_onHover = document.getElementById('lib_on-hover')
-const lib_onHover_Img = document.getElementById('lib_on-hover-img')
+const projectHover = document.querySelectorAll('.pr-on-hover > a')
 
-lib_onHover.onmousemove = (e) => {
-    lib_onHover_Img.style.width = '180px';
-    lib_onHover_Img.style.left = e.clientX + 'px'
-    lib_onHover_Img.style.top = e.clientY + 'px'
-}
-lib_onHover.onmouseleave = () => {
-    lib_onHover_Img.style.width = 0;
-}
+projectHover.forEach(elem => {
+    elem.addEventListener('mousemove', e => {
+        elem.querySelector('.on-hover-img').style.width = '180px';
+        elem.querySelector('.on-hover-img').style.left = e.clientX + 'px'
+        elem.querySelector('.on-hover-img').style.top = e.clientY + 'px'
 
-
-
+    })
+})
 
 // ---------------- Text Project Hover Ended -------------------
 
