@@ -142,6 +142,28 @@ upArrowBtn.onclick = () => {
 }
 
 
+// ---------------- Text Project Hover -------------------
+
+const lib_onHover = document.getElementById('lib_on-hover')
+const lib_onHover_Img = document.getElementById('lib_on-hover-img')
+
+lib_onHover.onmousemove = (e) => {
+    // lib_onHover_Img.style.display = 'block';
+    lib_onHover_Img.style.width = '180px';
+    lib_onHover_Img.style.left = e.clientX + 'px'
+    lib_onHover_Img.style.top = e.clientY + 'px'
+}
+lib_onHover.onmouseleave = () => {
+    lib_onHover_Img.style.width = 0;
+    // lib_onHover_Img.style.display = 'none';
+}
+
+
+
+
+// ---------------- Text Project Hover Ended -------------------
+
+
 let projectDetails = document.querySelector('.project-details')
 let flipBox = document.querySelectorAll('.pr-flip-box')
 let libManag = document.querySelector('.lib_management')

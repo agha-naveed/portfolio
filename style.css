@@ -759,6 +759,14 @@ nav ul .active-page {
     color: var(--font-color);
 }
 
+.on-hover-img {
+    position: absolute;
+    width: 0;
+    height: 125px;
+    transform: translateX(20px) translateY(-95px);
+    transition: 0.2s ease-out;
+}
+
 .pr-date {
     clip-path: polygon(0% 20%, 76% 20%, 100% 50%, 76% 80%, 0% 80%);
     background-color: var(--bg2-col);

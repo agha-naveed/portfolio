@@ -18,7 +18,7 @@ window.onmousemove = (e) => {
 
 document.addEventListener('mousemove', function(e) {
     let eventChecker = e.target
-    if (eventChecker.closest('.navbar ul') || eventChecker.closest('.btn-shine a') || eventChecker.closest('#search-input') || eventChecker.closest('.contact-me-btn a') || eventChecker.closest('.skills-box') || eventChecker.closest('.close-project-div')) {
+    if (eventChecker.closest('.navbar ul') || eventChecker.closest('.btn-shine a') || eventChecker.closest('#search-input') || eventChecker.closest('.contact-me-btn a') || eventChecker.closest('.skills-box') || eventChecker.closest('.close-project-div') || eventChecker.closest('#lib_on-hover')) {
         cursorBorder.classList.add('cursor-large')
     } else {
         cursorBorder.classList.remove('cursor-large')
