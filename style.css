@@ -760,10 +760,11 @@ nav ul .active-page {
 }
 
 .on-hover-img {
-    position: absolute;
-    width: 0;
-    height: 125px;
-    transform: translateX(20px) translateY(-95px);
+    position: fixed;
+    /* width: 180px; */
+    opacity: 1;
+    height: 120px;
+    transform: translateX(20px) translateY(20px);
     transition: 0.2s ease-out;
 }
 
@@ -1187,7 +1188,32 @@ nav ul .active-page {
     height: 40px;
     background-color: var(--font-color);
 }
+
+/* ========== Project Overlay Finished ========== */
+
+/* ========== Other Project ========== */
+.other-projects {
+    background-color: var(--bg-col);
+    width: 100%;
+    /* display: grid;
+    justify-content: center;
+    align-items: center; */
+}
+.other-projects h1, .other-projects p {
+    color: var(--text-col);
+}
+.other-pr-details a {
+    color: var(--text-col);
+    text-decoration: none;
+    cursor: none;
+}
+
+
+/* ========== Other Project Finished ========== */
+
+
 /* ------- Global Classes -------- */
+
 .h-line {
     width: 110px;
     height: 3.5px;
