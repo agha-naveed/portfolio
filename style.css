@@ -851,6 +851,8 @@ nav ul .active-page {
     position: relative;
     z-index: 2;
     color: black;
+    display: flex;
+    flex-direction: row-reverse;
 }
 .fl-box-front {
     outline: 5px solid var(--grayish-col);
@@ -860,6 +862,23 @@ nav ul .active-page {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+.overlay-bg {
+    background-color: var(--font-color);
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    z-index: 20;
+    transition: 0.2s ease-out;
+}
+.overlay-remove-bg {
+    background-color: black;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    z-index: 20;
+    transition: 0.4s ease-out;
 }
 
 

@@ -141,6 +141,7 @@ upArrowBtn.onclick = () => {
     window.location.href = '#start'
 }
 
+
 let projectDetails = document.querySelector('.project-details')
 let flipBox = document.querySelectorAll('.pr-flip-box')
 let libManag = document.querySelector('.lib_management')
@@ -148,6 +149,9 @@ let twitterClone = document.querySelector('.twitter_clone')
 let passwordStrength = document.querySelector('.otp_gen')
 let weatherApp = document.querySelector('.weather_app')
 let closeProjectDiv = document.querySelectorAll('.close-project-div')
+let pr_yellow_bg = document.querySelectorAll('.overlay-bg');
+let pr_remove_bg = document.querySelectorAll('.overlay-remove-bg');
+
 const root = document.documentElement;
 
 // Function to handle flipBox click
@@ -160,25 +164,28 @@ function handleFlipBoxClick(index) {
         project.style.display = 'flex';
         
         setTimeout(() => {
-            projectDetails.classList.remove('pr-details-hide')
+            projectDetails.classList.remove('pr-details-hide') 
+            pr_yellow_bg[index].style.width = "100%"
+            pr_remove_bg[index].style.width = "100%"
         }, 200);
+        setTimeout(() => root.style.setProperty('--padding', 0), 700)
         setTimeout(() => {
-            root.style.setProperty('--padding', 0);
             project.querySelector('.p-images').classList.add('show-f-right');
-        }, 700);
+        }, 800);
         setTimeout(() => {
             project.querySelector('.p-description').classList.add('show-f-right');
             project.querySelector('.p-animation').style.left = '5%'
             project.querySelector('.p-animation').style.width = '90%'
-        }, 900);
+
+        }, 1150);
         setTimeout(() => {
             project.querySelector('.p-animation').style.left = '100%'
             project.querySelector('.p-animation').style.width = 0
-        }, 1600);
+        }, 1900);
         setTimeout(() => {
             project.querySelector('.p-description > .p_para').classList.add('show-f-top');
             project.querySelector('.p-description > .p-animation-div > h1').classList.add('show-f-top');
-        }, 1700);
+        }, 2000);
 
         mouseY = e.clientY;
         currentScroll = window.scrollY;
@@ -193,6 +200,9 @@ flipBox.forEach((box, index) => {
 
 function handleCloseProjectDivClick() {
     setTimeout(() => {
+        pr_yellow_bg.forEach(elem => elem.style.width = 0)
+        pr_remove_bg.forEach(elem => elem.style.width = 0)
+        
         document.querySelectorAll('.p-description > .p_para').forEach(elem => elem.classList.remove('show-f-top'));
         document.querySelectorAll('.p-description > .p-animation-div > h1').forEach(elem => elem.classList.remove('show-f-top'));
     }, 300);
