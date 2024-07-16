@@ -148,7 +148,7 @@ const projectHover = document.querySelectorAll('.pr-on-hover')
 
 projectHover.forEach(elem => {
     elem.querySelector('a').addEventListener('mousemove', e => {
-        elem.querySelector('.on-hover-img').style.display = 'block'
+        elem.querySelector('.on-hover-img').classList.add('pr-hover-reveal')
         elem.querySelector('.on-hover-img').style.left = e.clientX + 'px'
         elem.querySelector('.on-hover-img').style.top = e.clientY + 'px'
         elem.querySelector('a').classList.add('pr-hover-text')
@@ -156,7 +156,7 @@ projectHover.forEach(elem => {
     elem.querySelector('a').addEventListener('mouseleave', e => {
         elem.querySelector('.on-hover-img').style.display = 'none'
         elem.querySelector('a').classList.remove('pr-hover-text')
-
+        elem.querySelector('.on-hover-img').classList.remove('pr-hover-reveal')
     })
 
 })

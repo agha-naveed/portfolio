@@ -11,8 +11,8 @@ window.onmousemove = (e) => {
         cursorBorder.style.top = -7.5 + e.clientY + 'px';
     }
     else {
-        cursorBorder.style.left = -25 + e.clientX + 'px';
-        cursorBorder.style.top = -28 + e.clientY + 'px';
+        cursorBorder.style.left = -24 + e.clientX + 'px';
+        cursorBorder.style.top = -24.5 + e.clientY + 'px';
     }
 }
 
