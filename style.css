@@ -717,6 +717,7 @@ nav ul .active-page {
     display: grid;
     justify-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 .project-body {
     width: 60%;
@@ -1223,15 +1224,13 @@ nav ul .active-page {
     cursor: none;
     position: relative;
     z-index: 20;
-    transition: 0.2s ease-out;
+    transition: 0.15s ease-out;
 }
 
 .on-hover-img {
     z-index: 20;
     position: fixed;
-    /* width: 180px; */
     display: none;
-    /* opacity: 1; */
     height: 120px;
     transform: translateX(20px) translateY(20px);
     transition: 0.2s ease-out;
@@ -1241,6 +1240,7 @@ nav ul .active-page {
     color: var(--font-color) !important;
     margin-left: 10px;
 }
+
 
 /* ========== Other Project Finished ========== */
 
