@@ -1204,6 +1204,7 @@ nav ul .active-page {
     display: grid;
     grid-template-columns: auto auto;
     padding-left: 50px;
+    gap: 10%;
 }
 .pr-col {
     display: flex;
