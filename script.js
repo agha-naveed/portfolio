@@ -149,20 +149,14 @@ const projectHover = document.querySelectorAll('.pr-on-hover')
 projectHover.forEach(elem => {
     let img = elem.querySelector('.on-hover-img');
 
-    elem.addEventListener('mouseenter', () => {
-        img.style.width = '213.333px';
-    })
-    elem.addEventListener('mouseleave', () => {
-        img.style.width = 0;
-    })
-
     elem.querySelector('a').addEventListener('mousemove', e => {
+        img.style.width = 'auto'
         img.style.left = e.clientX + 'px'
         img.style.top = e.clientY + 'px'
         elem.querySelector('a').classList.add('pr-hover-text')
     })
     elem.querySelector('a').addEventListener('mouseleave', e => {
-        // img.style.width = 0
+        img.style.width = 0
         elem.querySelector('a').classList.remove('pr-hover-text')
     })
 
