@@ -149,18 +149,15 @@
     }
 
 }
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 960px) {
     .pr-images {
         justify-items: center;
         grid-template-columns: auto;
         gap: 0;
-        row-gap: 0;
+        row-gap: 20px;
     }
     .pr-flip-box {
         width: 60%;
-    }
-    .c-heading, .c-footer {
-        width: 93%;
     }
 }
 
@@ -170,9 +167,6 @@
     }
     .l-line-2, .r-line-2 {
         width: 32%;
-    }
-    .c-me, .c-heading, .c-footer {
-        width: 100%;
     }
 
 
@@ -345,6 +339,10 @@
         font-size: 30px;
     }
 
+
+    .pr-images {
+        row-gap: 0;
+    }
 
     .pr-flip-box:nth-child(2) {
         position: relative;

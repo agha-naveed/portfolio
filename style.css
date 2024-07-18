@@ -815,7 +815,7 @@ nav ul .active-page {
 
 .pr-flip-box {
     width: 20rem;
-    height: 97%;
+    height: 100%;
     --shine-x: 50%;
     --shine-y: 50%;
     transition: box-shadow 0.1s ease, scale 0.4s ease;
@@ -898,11 +898,10 @@ nav ul .active-page {
 .c-me {
     display: grid;
     gap: 30px;
-    width: 100%;
+    width: fit-content;
 }
 
-.c-heading , .c-footer{
-    width: 98%;
+.c-heading , .c-footer {
     z-index: 12;
     position: relative;
     display: flex;
@@ -911,10 +910,11 @@ nav ul .active-page {
 }
 .c-heading {
     top: -27px;
+    width: 100%;
 }
 .c-footer {
+    width: 99vw;
     top: 13px;
-    gap: 40px;
 }
 .l-line, .r-line {
     width: 40%;
@@ -1212,6 +1212,7 @@ nav ul .active-page {
     gap: 15px;
     color: white;
     list-style-type: circle;
+    position: relative;
 }
 .pr-on-hover {
     position: relative;
