@@ -1223,7 +1223,7 @@ nav ul .active-page {
     cursor: none;
     position: relative;
     z-index: 20;
-    transition: 0.15s ease-out;
+    transition: 0.15s linear;
 }
 
 .on-hover-img {
@@ -1239,7 +1239,7 @@ nav ul .active-page {
 }
 .pr-hover-text {
     color: var(--font-color) !important;
-    margin-left: 10px;
+    padding-left: 10px;
     
 }
 
@@ -1276,4 +1276,12 @@ nav ul .active-page {
 
 .p-section {
     padding: 40px 80px;
+}
+
+
+.o-pr-heading {
+    list-style-type: none;
+    position: relative;
+    left: -20px;
+    color: var(--font-color);
 }

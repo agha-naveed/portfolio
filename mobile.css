@@ -271,9 +271,6 @@
     .other-pr-details {
         grid-template-columns: auto;
     }
-    .pr-col:nth-child(2) {
-        margin-top: 13px;
-    }
 }
 
 @media only screen and (max-width: 470px) {
