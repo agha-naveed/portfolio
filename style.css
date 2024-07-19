@@ -47,7 +47,8 @@ html, body {
     display: grid;
     justify-content: center;
     align-items: center;
-    transition: 5s ease;
+    opacity: 1;
+    transition: 3s ease;
 }
 .loader-texts {
     color: white;
