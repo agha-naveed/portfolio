@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         loader.style.top = '100%';
         this.setTimeout(() => {
             loader.style.display = 'none'
-        }, 700)
+        }, 5000)
         content.style.display = "block";
     });
 })
