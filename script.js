@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("load", function() {
-        var loader = document.querySelector(".loader-bg");
+        var loader = document.querySelector(".loader");
         var content = document.querySelector(".root");
 
         loader.style.display = "none";

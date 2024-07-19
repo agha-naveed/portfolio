@@ -38,94 +38,74 @@ html, body {
 }
 
 /* ------ Loader ------ */
-.loader-bg {
+.loader {
+    position: absolute;
     width: 100%;
-    height: 100%;
-    background-color: rgb(24, 24, 24);
-    z-index: 200;
-    position: absolute;
+    height: 100vh;
+    background-color: black;
+    z-index: 2000;
     display: grid;
-    gap: 50px;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
-#loader-text {
+.loader-texts {
     color: white;
+    display: flex;
+    gap: 5px;
+}
+.load {
+    opacity: 0;
+    animation: loader 2.4s infinite linear;
+}
 
-}
-.cube-loader {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    margin: auto;
-    z-index: 20;
-}
-  
-.cube {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    background-color: #333;
-    border: 2px solid #fff;
-    animation: foldCube 2.4s infinite linear;
-}
-  
-  /* Individual cube positioning */
-.cube1 {
-    top: 0;
-    left: 0;
-    transform-origin: 100% 100%;
-    }
-.cube2 {
-    top: 0;
-    right: 0;
-    transform-origin: 0 100%;
-}
-.cube3 {
-    bottom: 0;
-    right: 0;
-    transform-origin: 0 0;
-}
-.cube4 {
-    bottom: 0;
-    left: 0;
-    transform-origin: 100% 0;
-}
-  
-  /* Keyframes for the folding animation */
-@keyframes foldCube {
-    0%,
-    10% {
-        transform: perspective(140px) rotateX(-180deg);
+@keyframes loader {
+    0% {
         opacity: 0;
     }
-    25%,
-    75% {
-        transform: perspective(140px) rotateX(0deg);
+    100% {
         opacity: 1;
     }
-    90%,
-    100% {
-        transform: perspective(140px) rotateY(180deg);
-        opacity: 0;
-    }
+
 }
 
-.cube1 {
-    animation-delay: 0.3s;
+
+.load1 {
+    animation-delay: 0.2s;
 }
-.cube2 {
+.load2 {
+    animation-delay: 0.4s;
+}
+.load3 {
     animation-delay: 0.6s;
 }
-.cube3 {
-    animation-delay: 0.9s;
+.load4 {
+    animation-delay: 0.8s;
 }
-.cube4 {
-    animation-delay: 1.2s;
+.load5 {
+    animation-delay: 1s;
+}
+.load6 {
+    animation-delay: 1.1s;
+}
+.load7 {
+    animation-delay: 1.25s;
+}
+.load8 {
+    animation-delay: 1.35s;
+}
+.load9 {
+    animation-delay: 1.45s;
+}
+.load10 {
+    animation-delay: 1.55s;
+}
+.load11 {
+    animation-delay: 1.65s;
+}
+.load12 {
+    animation-delay: 1.75s;
 }
   
-
-
 
 
 .cursor-border {
@@ -138,7 +118,7 @@ html, body {
     border-radius: 50%;
     border: 1.5px solid white;
     mix-blend-mode: difference;
-    z-index: 1000;
+    z-index: 3000;
     transition: 0.2s ease-out;
     pointer-events: none;
 }
@@ -155,7 +135,7 @@ html, body {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    z-index: 1000;
+    z-index: 3000;
     pointer-events: none;
     mix-blend-mode: difference;
 }
