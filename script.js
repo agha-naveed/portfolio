@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
         var loader = document.querySelector(".loader");
         var content = document.querySelector(".root");
 
-        loader.style.display = "none";
-
+        loader.style.top = '100%';
+        this.setTimeout(() => {
+            loader.style.display = 'none'
+        }, 700)
         content.style.display = "block";
     });
 })
