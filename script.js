@@ -84,6 +84,7 @@ githubLogo.forEach(elem => {
 
 let skillsRow1 = document.querySelectorAll('.skills-row')[0];
 let skillsRow2 = document.querySelectorAll('.skills-row')[1];
+// let skillsRow3 = document.querySelectorAll('.skills-row')[2];
 
 let ticking = false;
 
@@ -93,10 +94,12 @@ function checkBoxes() {
     if (boxTop < triggerBottom && boxTop > -200) {
         skillsRow1.classList.add('r-show');
         skillsRow2.classList.add('r-show');
+        // skillsRow3.classList.add('r-show');
     }
     else {
         skillsRow1.classList.remove('r-show');
         skillsRow2.classList.remove('r-show');
+        // skillsRow3.classList.remove('r-show');
    }
     ticking = false;
 }

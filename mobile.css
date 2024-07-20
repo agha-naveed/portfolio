@@ -14,6 +14,11 @@
     .contact-me-btn a {
         font-size: 18px;
     }
+
+    .skills-box {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 @media only screen and (max-width: 1020px) {
@@ -202,6 +207,15 @@
     .snowA::after{
         filter: blur(4px);
     }
+
+    .skills-box {
+        width: 92px;
+        height: 92px;
+        gap: 15px;
+    }
+    .skills-box p {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 650px) {
@@ -220,13 +234,6 @@
     .social-icons {
         display: none;
     }
-    .skills-box {
-        width: 92px;
-        height: 92px;
-    }
-    .skills-box p {
-        font-size: 12px;
-    }
 
     .up-arrow-btn {
         display: none;
@@ -234,6 +241,9 @@
     
     .pr-images {
         width: 80%;
+    }
+    .skills-grid-view, .skills-grid-view .skills-row {
+        gap: 10px;
     }
 }
 
@@ -265,19 +275,21 @@
     .other-pr-details {
         grid-template-columns: auto;
     }
-}
-
-@media only screen and (max-width: 470px) {
     .skills-grid-view .skills-row {
         display: grid;
         gap: 14px;
         grid-template-columns: auto auto;
     }
     .skills-box {
-        gap: 8px;
+        gap: 15px;
         width: 100px;
         height: 100px;
     }
+}
+
+@media only screen and (max-width: 470px) {
+    
+   
 
     .project-section {
         overflow: hidden;
