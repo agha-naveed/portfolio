@@ -613,10 +613,12 @@ nav ul .active-page {
 .skills-grid-view {
     display: grid;
     gap: 20px;
+    max-width: 1080px;
     overflow: hidden;
 }
 .skills-grid-view .skills-row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     position: relative;

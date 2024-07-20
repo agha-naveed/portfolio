@@ -164,6 +164,9 @@
     .pr-flip-box {
         width: 60%;
     }
+    .skills-box p {
+        font-size: 15px;
+    }
 }
 
 @media only screen and (max-width: 845px) {
