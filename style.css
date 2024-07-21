@@ -621,7 +621,7 @@ nav ul .active-page {
     justify-content: center;
     gap: 20px;
     position: relative;
-    transition: 0.55s ease-out;
+    transition: 0.65s ease-out;
     width: 100%;
     opacity: 0;
 }
@@ -1239,7 +1239,7 @@ nav ul .active-page {
     opacity: 1 !important;
 }
 .sk-box-up {
-    transform: translateX(0) translateY(100px) !important;
+    transform: translateX(0) translateY(60px) !important;
 }
 .m-b-40 {
     margin-bottom: 40px;
