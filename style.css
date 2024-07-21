@@ -614,7 +614,6 @@ nav ul .active-page {
     display: grid;
     gap: 20px;
     max-width: 1080px;
-    overflow: hidden;
 }
 .skills-grid-view .skills-row {
     display: flex;
@@ -625,12 +624,6 @@ nav ul .active-page {
     transition: 0.7s ease-out;
     width: 100%;
     opacity: 0;
-}
-.skills-row:nth-child(1) {
-    transform: translateX(-50px);
-}
-.skills-row:nth-child(2) {
-    transform: translateX(50px);
 }
 
 .skills-box {
@@ -1244,6 +1237,9 @@ nav ul .active-page {
 .r-show {
     transform: translateX(0) translateY(0) !important;
     opacity: 1 !important;
+}
+.sk-box-up {
+    transform: translateX(0) translateY(50px) !important;
 }
 .m-b-40 {
     margin-bottom: 40px;
