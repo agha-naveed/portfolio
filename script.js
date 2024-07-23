@@ -81,33 +81,24 @@ githubLogo.forEach(elem => {
 });
 
 
-
 let skillsRow = document.querySelector('.skills-row')
 
-let ticking = false;
+let observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+        }
+        else {
+            entry.target.style.opacity = 0;
+            entry.target.style.transform = 'translateY(60px)';
+        }
+    });
+}, {
+    threshold: 0.5
+});
 
-function checkBoxes() {
-    const triggerBottom = window.innerHeight / 5 * 4;
-    const boxTop = skillsRow.getBoundingClientRect().top;
-    if (boxTop < triggerBottom && boxTop > -200) {
-        skillsRow.classList.add('r-show');
-        skillsRow.classList.remove('sk-box-up');
-    }
-    else {
-        skillsRow.classList.remove('r-show');
-        skillsRow.classList.add('sk-box-up');
-   }
-    ticking = false;
-}
-
-function onScroll() {
-    if (!ticking) {
-        window.requestAnimationFrame(checkBoxes);
-        ticking = true;
-    }
-}
-  
-window.addEventListener('scroll', onScroll);
+observer.observe(skillsRow);
 
 
 const myPic = document.querySelector('.my-pic > img')
@@ -287,3 +278,6 @@ flipBox.forEach(flip_1 => {
         flip_1.style.boxShadow = ``
     });
 })
+
+
+// smoothScroll({yPos: 'end'});
