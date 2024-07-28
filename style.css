@@ -747,7 +747,7 @@ nav ul .active-page {
     top: 35%;
     left: -200px;
     color: var(--bg2-col);
-    font-size: 8rem;
+    font-size: 12rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 900;
     z-index: -1;
@@ -1210,6 +1210,19 @@ nav ul .active-page {
 .other-projects {
     background-color: var(--bg-col);
     width: 100%;
+}
+.other-projects::before {
+    mix-blend-mode: screen;
+    content: 'OTHER';
+    position: absolute;
+    bottom: 150px;
+    right: -200px;
+    color: var(--bg-col);
+    font-size: 19rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    z-index: 1;
+    opacity: 0.08;
 }
 .other-projects h1 {
     font-size: 35px;
