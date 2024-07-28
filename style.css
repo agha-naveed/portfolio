@@ -583,16 +583,17 @@ nav ul .active-page {
     overflow-x: hidden;
 }
 .skills-section::before {
+    mix-blend-mode: darken;
     content: 'SKILLS';
     position: absolute;
-    top: 250px;
-    right: -180px;
-    color: var(--font-color);
-    font-size: 12rem;
-    font-family: sans-serif;
-    font-weight: 700;
+    top: 150px;
+    right: -500px;
+    color: var(--bg-col);
+    font-size: 19rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
     z-index: -1;
-    opacity: 0.08;
+    opacity: 0.2;
 }
 .about-sec {
     width: 65%;
@@ -731,18 +732,6 @@ nav ul .active-page {
     justify-content: center;
     gap: 35px;
 }
-.project-body::before {
-    content: 'PROJECTS';
-    position: absolute;
-    top: 250px;
-    left: 0;
-    color: var(--font-color);
-    font-size: 8rem;
-    font-family: sans-serif;
-    font-weight: 700;
-    z-index: -1;
-    opacity: 0.08;
-}
 .pr-heading h1 {
     color: var(--text-col);
     font-size: 35px;
@@ -751,6 +740,19 @@ nav ul .active-page {
     gap: 50px;
     display: grid;
     justify-content: right;
+}
+.projects::before {
+    content: 'PROJECTS';
+    position: absolute;
+    top: 35%;
+    left: -200px;
+    color: var(--bg2-col);
+    font-size: 8rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    z-index: -1;
+    opacity: 0.2;
+    mix-blend-mode: difference;
 }
 .pr {
     display: flex;
