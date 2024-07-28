@@ -588,12 +588,11 @@ nav ul .active-page {
     top: 250px;
     right: -180px;
     color: var(--font-color);
-    
     font-size: 12rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 900;
+    font-family: sans-serif;
+    font-weight: 700;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.08;
 }
 .about-sec {
     width: 65%;
@@ -731,6 +730,18 @@ nav ul .active-page {
     display: grid;
     justify-content: center;
     gap: 35px;
+}
+.project-body::before {
+    content: 'PROJECTS';
+    position: absolute;
+    top: 250px;
+    left: 0;
+    color: var(--font-color);
+    font-size: 8rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    z-index: -1;
+    opacity: 0.08;
 }
 .pr-heading h1 {
     color: var(--text-col);
