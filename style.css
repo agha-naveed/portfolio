@@ -24,6 +24,9 @@ html, body {
 .root {
     display: none;
 }
+.main-body {
+    display: none;
+}
 ::-webkit-scrollbar {
     width: 10px;
     background-color: rgb(26, 26, 26);
@@ -48,8 +51,9 @@ html, body {
     width: 100%;
     height: 100%;
     z-index: 200;
-    display: none;
+    /* display: none; */
 }
+
 .loader {
     color: rgb(124, 124, 124);
     font-family: "Poppins", sans-serif;
@@ -61,7 +65,7 @@ html, body {
     padding: 10px 10px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex !important;
     border-radius: 8px;
     justify-content: center;
 }
@@ -92,71 +96,27 @@ html, body {
 }
   
   @keyframes spin_4991 {
-    /* 10% {
-        -webkit-transform: translateY(-102%);
-        transform: translateY(-102%);
-    }
-  
-    25% {
-        -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
-    }
-  
-    35% {
-        -webkit-transform: translateY(-202%);
-        transform: translateY(-202%);
-    }
-  
-    50% {
-        -webkit-transform: translateY(-200%);
-        transform: translateY(-200%);
-    }
-  
-    60% {
-        -webkit-transform: translateY(-302%);
-        transform: translateY(-302%);
-    }
-  
-    75% {
-        -webkit-transform: translateY(-300%);
-        transform: translateY(-300%);
-    }
-  
-    85% {
-        -webkit-transform: translateY(-402%);
-        transform: translateY(-402%);
-    }
-  
-    100% {
+    0% {
         -webkit-transform: translateY(-400%);
         transform: translateY(-400%);
-    } */
-    /* 0% {
-        -webkit-transform: translateY(400%);
-        transform: translateY(400%);
-    } */
-
-    
-    /* 0% {
+    }
+    25% {
         -webkit-transform: translateY(0%);
         transform: translateY(0%);
-    } */
-    25% {
+    }
+    50% {
         -webkit-transform: translateY(-100%);
         transform: translateY(-100%);
     }
-    50% {
+    75% {
         -webkit-transform: translateY(-200%);
         transform: translateY(-200%);
     }
-    75% {
+    100% {
         -webkit-transform: translateY(-300%);
         transform: translateY(-300%);
     }
-    100% {
-        -webkit-transform: translateY(400%);
-        transform: translateY(400%);
-    }
+    
 }
 
 .cursor-border {
