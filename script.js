@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("load", function() {
-        var loader = document.querySelector(".loader");
+        var loader = document.querySelector(".card");
         var content = document.querySelector(".root");
 
         loader.style.display = 'none'
