@@ -89,10 +89,6 @@ html, body {
 }
   
   @keyframes spin_4991 {
-    0% {
-        -webkit-transform: translateY(-400%);
-        transform: translateY(-400%);
-    }
     25% {
         -webkit-transform: translateY(0%);
         transform: translateY(0%);
