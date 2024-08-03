@@ -597,17 +597,6 @@ nav ul .active-page {
     width: 65%;
     margin: 40px 0;
 }
-/* .about-sec::before {
-    content: 'ABOUT';
-    position: absolute;
-    top: -20px;
-    right: -250px;
-    color: var(--font-color);
-    font-size: 12rem;
-    font-weight: 900;
-    z-index: -1;
-    opacity: 0.2;
-} */
 .about-bg-text h1 {
     color: var(--font-color);
     font-size: 50px;
