@@ -732,7 +732,7 @@ nav ul .active-page {
     content: 'PROJECTS';
     position: absolute;
     top: 32%;
-    left: -30%;
+    left: -35%;
     color: var(--bg2-col);
     font-size: 19rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
