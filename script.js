@@ -110,6 +110,7 @@ function checkBoxes() {
 
     ticking = false;
 
+    
 }
 
 let ticking = false;
@@ -121,9 +122,7 @@ function onScroll() {
     }
 }
   
-window.addEventListener('scroll', () => {setTimeout(() => {
-    onScroll()
-}, 900)});
+window.addEventListener('scroll', onScroll);
 
 
 
