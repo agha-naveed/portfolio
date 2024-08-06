@@ -1282,7 +1282,7 @@ nav ul .active-page {
 }
 .sk-box-up {
     opacity: 0;
-    transform: translateX(60px) translateY(0px);
+    transform: translateX(0px) translateY(60px);
 }
 .m-b-40 {
     margin-bottom: 40px;

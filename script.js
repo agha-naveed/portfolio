@@ -123,7 +123,7 @@ function onScroll() {
   
 window.addEventListener('scroll', () => {setTimeout(() => {
     onScroll()
-}, 400)});
+}, 900)});
 
 
 
