@@ -103,7 +103,7 @@ function checkBoxes() {
             }
         });
     }, {
-        threshold: 0.4
+        threshold: 0.5
     });
 
     observer.observe(skillsSec);
@@ -121,11 +121,9 @@ function onScroll() {
     }
 }
   
-window.addEventListener('scroll', setTimeout(() => {
+window.addEventListener('scroll', () => {setTimeout(() => {
     onScroll()
-}, 1000));
-
-
+}, 400)});
 
 
 

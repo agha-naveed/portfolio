@@ -638,9 +638,8 @@ nav ul .active-page {
     justify-content: center;
     gap: 20px;
     position: relative;
-    transition: 0.65s ease-out;
+    transition: 0.4s linear;
     width: 100%;
-    /* opacity: 0; */
 }
 
 .skills-box {
