@@ -107,10 +107,6 @@ function checkBoxes() {
     });
 
     observer.observe(skillsSec);
-
-    ticking = false;
-
-    
 }
 
 let ticking = false;
@@ -185,7 +181,7 @@ projectHover.forEach(elem => {
 let projectDetails = document.querySelector('.project-details')
 let flipBox = document.querySelectorAll('.pr-flip-box')
 let libManag = document.querySelector('.lib_management')
-let twitterClone = document.querySelector('.music_player')
+let musicPlayer = document.querySelector('.music_player')
 let passwordStrength = document.querySelector('.otp_gen')
 let weatherApp = document.querySelector('.weather_app')
 let closeProjectDiv = document.querySelectorAll('.close-project-div')
@@ -200,7 +196,7 @@ function handleFlipBoxClick(index) {
         projectDetails.style.width = '100%';
         document.body.style.overflow = 'hidden'
         
-        let project = [libManag, twitterClone, passwordStrength, weatherApp][index];
+        let project = [libManag, musicPlayer, passwordStrength, weatherApp][index];
         project.style.display = 'flex';
         
         setTimeout(() => {
@@ -253,7 +249,7 @@ function handleCloseProjectDivClick() {
         root.style.setProperty('--padding', '120px');
     }, 500);
     setTimeout(() => {
-        [libManag, twitterClone, passwordStrength, weatherApp].forEach(project => project.style.display = 'none');
+        [libManag, musicPlayer, passwordStrength, weatherApp].forEach(project => project.style.display = 'none');
     }, 1120);
 
     setTimeout(() => {
