@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
+
+
+
+
 let searchBtn = document.querySelector('.resp-search-box')
 let respSearch = document.querySelector('.resp-search')
 let searchCloseBtn = document.querySelector('.search-close-btn')
@@ -82,20 +86,44 @@ githubLogo.forEach(elem => {
 
 
 
-let skillsRow = document.querySelector('.skills-row')
+// let skillsRow = document.querySelector('.skills-row')
 
 function checkBoxes() {
-    const triggerBottom = window.innerHeight / 5 * 4;
-    const boxTop = skillsRow.getBoundingClientRect().top;
-    if (boxTop < triggerBottom && boxTop > -200) {
-        skillsRow.classList.add('r-show');
-        skillsRow.classList.remove('sk-box-up');
-    }
-    else {
-        skillsRow.classList.remove('r-show');
-        skillsRow.classList.add('sk-box-up');
-   }
+//     const triggerBottom = window.innerHeight / 5 * 4;
+//     const boxTop = skillsRow.getBoundingClientRect().top;
+//     if (boxTop < triggerBottom && boxTop > -200) {
+//         skillsRow.classList.add('r-show');
+//         skillsRow.classList.remove('sk-box-up');
+//     }
+//     else {
+//         skillsRow.classList.remove('r-show');
+//         skillsRow.classList.add('sk-box-up');
+//    }
+
+    let skillsRow = document.querySelector('.skills-row')
+    let skillsSec = document.querySelector('.div-show')
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                skillsRow.classList.add('r-show');
+                skillsRow.classList.remove('sk-box-up');
+                observer.unobserve(skillsRow);
+            }
+            else {
+                skillsRow.classList.remove('r-show');
+                skillsRow.classList.add('sk-box-up');
+            }
+        });
+    }, {
+        threshold: 0.9 // Trigger when at least 10% of the element is visible
+    });
+
+    // Start observing the target element
+    observer.observe(skillsSec);
+
     ticking = false;
+
 }
 
 let ticking = false;
@@ -107,7 +135,13 @@ function onScroll() {
     }
 }
   
-window.addEventListener('scroll', onScroll);
+window.addEventListener('scroll', setTimeout(() => {
+    onScroll()
+}, 1000));
+
+
+
+
 
 
 const myPic = document.querySelector('.my-pic > img')
