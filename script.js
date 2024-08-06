@@ -103,7 +103,7 @@ function checkBoxes() {
             }
         });
     }, {
-        threshold: 0.5
+        threshold: 0.4
     });
 
     observer.observe(skillsSec);
