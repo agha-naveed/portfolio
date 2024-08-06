@@ -1309,3 +1309,8 @@ nav ul .active-page {
     left: -20px;
     color: var(--font-color);
 }
+.div-show {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+}
