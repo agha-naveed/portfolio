@@ -86,23 +86,10 @@ githubLogo.forEach(elem => {
 
 
 
-// let skillsRow = document.querySelector('.skills-row')
 
 function checkBoxes() {
-//     const triggerBottom = window.innerHeight / 5 * 4;
-//     const boxTop = skillsRow.getBoundingClientRect().top;
-//     if (boxTop < triggerBottom && boxTop > -200) {
-//         skillsRow.classList.add('r-show');
-//         skillsRow.classList.remove('sk-box-up');
-//     }
-//     else {
-//         skillsRow.classList.remove('r-show');
-//         skillsRow.classList.add('sk-box-up');
-//    }
-
     let skillsRow = document.querySelector('.skills-row')
-    let skillsSec = document.querySelector('.div-show')
-
+    let skillsSec = document.querySelector('.skills-sec')
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -116,10 +103,9 @@ function checkBoxes() {
             }
         });
     }, {
-        threshold: 0.9 // Trigger when at least 10% of the element is visible
+        threshold: 0.4
     });
 
-    // Start observing the target element
     observer.observe(skillsSec);
 
     ticking = false;
@@ -321,6 +307,3 @@ flipBox.forEach(flip_1 => {
         flip_1.style.boxShadow = ``
     });
 })
-
-
-// smoothScroll({yPos: 'end'});
