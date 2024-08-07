@@ -4,9 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
-                img.src = img.dataset.src; // Set the src attribute from data-src
-                img.onload = () => img.classList.add('loaded'); // Optional: add a class once the image is loaded
-                observer.unobserve(img); // Stop observing the image after loading
+                img.src = img.dataset.src;
+                observer.unobserve(img); 
             }
         });
     }
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver(lazyLoad, {
         root: null, // Use the viewport as the root
         rootMargin: '0px', // No margin around the root
-        threshold: 0.1 // Trigger when at least 10% of the image is visible
+        threshold: 0.9 // Trigger when at least 10% of the image is visible
     });
 
     // Get all images with the class "lazy"
