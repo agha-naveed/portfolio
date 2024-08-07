@@ -879,7 +879,7 @@ nav ul .active-page {
     width: 0%;
     height: 100%;
     z-index: 20;
-    transition: 0.1s ease-out;
+    transition: 0.15s ease-out;
 }
 .overlay-remove-bg {
     background-color: black;
@@ -888,7 +888,7 @@ nav ul .active-page {
     width: 0%;
     height: 100%;
     z-index: 20;
-    transition: 0.4s ease-out;
+    transition: 0.3s ease-out;
 }
 
 
