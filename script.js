@@ -278,8 +278,8 @@ flipBox.forEach(flip_1 => {
         flip_1.style.boxShadow = `0 20px 25px rgba(0, 0, 0, 0.425)`
     
         // Calculate the rotation values based on mouse position
-        const rotateX = ((y / rect.height) - 0.5) * 40; // Adjust the multiplier for desired effect
-        const rotateY = ((x / rect.width) - 0.5) * -40; // Adjust the multiplier for desired effect
+        const rotateX = ((y / rect.height) - 0.5) * 45; // Adjust the multiplier for desired effect
+        const rotateY = ((x / rect.width) - 0.5) * -45; // Adjust the multiplier for desired effect
 
         // Apply the transform
         flip_1.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${ rotateY}deg)`;
