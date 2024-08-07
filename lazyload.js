@@ -12,16 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Create an IntersectionObserver instance
     const observer = new IntersectionObserver(lazyLoad, {
-        root: null, // Use the viewport as the root
-        rootMargin: '0px', // No margin around the root
-        threshold: 0.9 // Trigger when at least 10% of the image is visible
+        root: null,
+        rootMargin: '100px',
+        threshold: 0.1
     });
 
-    // Get all images with the class "lazy"
     const lazyImages = document.querySelectorAll('img.lazy');
 
-    // Observe each lazy image
     lazyImages.forEach(image => {
         observer.observe(image);
-    });
+    }); 
 });
