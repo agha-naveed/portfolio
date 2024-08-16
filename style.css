@@ -262,7 +262,7 @@ nav ul .active-page {
     display: none;
 }
 #search-input, #resp-search-input {
-    color: var(--grayish-col);
+    color: #A7A7A7;
     background-color: var(--bg2-col);
     border: none;
     outline: none;
