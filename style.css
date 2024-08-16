@@ -267,7 +267,7 @@ nav ul .active-page {
     border: none;
     outline: none;
     font-size: 22px;
-    padding: 12px 20px;
+    padding: 12px 52px 12px 20px;
     transition: 0.2s linear;
     user-select: none;
     -moz-user-select: none;
