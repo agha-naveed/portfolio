@@ -19,6 +19,9 @@
         width: 150px;
         height: 150px;
     }
+    .sk-hide {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1020px) {

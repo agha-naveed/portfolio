@@ -88,25 +88,31 @@ githubLogo.forEach(elem => {
 
 
 function checkBoxes() {
-    let skillsRow = document.querySelector('.skills-row')
+    let skillsRow = document.querySelectorAll('.skills-row')
     let skillsSec = document.querySelector('.skills-sec')
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                skillsRow.classList.add('r-show');
-                skillsRow.classList.remove('sk-box-up');
-                observer.unobserve(skillsRow);
-            }
-            else {
-                skillsRow.classList.remove('r-show');
-                skillsRow.classList.add('sk-box-up');
-            }
-        });
-    }, {
-        threshold: 0.4
-    });
 
-    observer.observe(skillsSec);
+    skillsRow.forEach((el) => {
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    el.classList.add('r-show');
+                    el.classList.remove('sk-box-up');
+                    observer.unobserve(el);
+                }
+                else {
+                    el.classList.remove('r-show');
+                    el.classList.add('sk-box-up');
+                }
+            });
+        }, {
+            threshold: 0.4
+        });
+    
+
+        observer.observe(skillsSec);
+        
+    })
 }
 
 let ticking = false;
