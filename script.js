@@ -88,31 +88,27 @@ githubLogo.forEach(elem => {
 
 
 function checkBoxes() {
-    let skillsRow = document.querySelectorAll('.skills-row')
+    let skillsRow = document.querySelector('.skills-row')
     let skillsSec = document.querySelector('.skills-sec')
 
-    skillsRow.forEach((el) => {
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    el.classList.add('r-show');
-                    el.classList.remove('sk-box-up');
-                    observer.unobserve(el);
-                }
-                else {
-                    el.classList.remove('r-show');
-                    el.classList.add('sk-box-up');
-                }
-            });
-        }, {
-            threshold: 0.4
-        });
     
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                skillsRow.classList.add('r-show');
+                skillsRow.classList.remove('sk-box-up');
+                observer.unobserve(skillsRow);
+            }
+            else {
+                skillsRow.classList.remove('r-show');
+                skillsRow.classList.add('sk-box-up');
+            }
+        });
+    }, {
+        threshold: 0.4
+    });
 
-        observer.observe(skillsSec);
-        
-    })
+    observer.observe(skillsSec);
 }
 
 let ticking = false;
@@ -235,7 +231,7 @@ function handleFlipBoxClick(index) {
     }
 }
 
-// Add click event listeners for flipBox elements
+
 flipBox.forEach((box, index) => {
     box.addEventListener('click', handleFlipBoxClick(index));
 });
@@ -267,7 +263,6 @@ function handleCloseProjectDivClick() {
     }, 1400);
 }
 
-// Add click event listeners for close project div elements
 closeProjectDiv.forEach(elem => {
     elem.addEventListener('click', handleCloseProjectDivClick);
 });
@@ -280,19 +275,18 @@ flipBox.forEach(flip_1 => {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
     
-        // Box-Shadow
+        
         flip_1.style.boxShadow = `0 20px 25px rgba(0, 0, 0, 0.425)`
     
-        // Calculate the rotation values based on mouse position
-        const rotateX = ((y / rect.height) - 0.5) * 45; // Adjust the multiplier for desired effect
-        const rotateY = ((x / rect.width) - 0.5) * -45; // Adjust the multiplier for desired effect
+        const rotateX = ((y / rect.height) - 0.5) * 45; 
+        const rotateY = ((x / rect.width) - 0.5) * -45; 
 
-        // Apply the transform
+        
         flip_1.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${ rotateY}deg)`;
         const shineX = ((x / rect.width) * 100).toFixed(2);
         const shineY = ((y / rect.height) * 100).toFixed(2);
 
-        // Update the position of the pseudo-element to simulate sunlight
+        
         flip_1.style.setProperty('--shine-x', `${shineX}%`);
         flip_1.style.setProperty('--shine-y', `${shineY}%`);
     });

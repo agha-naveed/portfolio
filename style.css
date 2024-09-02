@@ -58,8 +58,8 @@ html, body {
     font-size: 48px;
     letter-spacing: 4px;
     box-sizing: border-box;
-  }
-  .loader::before {
+}
+.loader::before {
     content: '';  
     box-sizing: border-box;
     position: absolute;
@@ -68,8 +68,8 @@ html, body {
     height: 24px;
     width: 5.15px;
     background: currentColor;
-  }
-  .loader::after {
+}
+.loader::after {
     content: '';  
     width: 8px;
     height: 8px;
@@ -82,7 +82,7 @@ html, body {
     animation: animloader 1s ease-in infinite;
   }
   
-  @keyframes animloader {
+@keyframes animloader {
     0% {
       transform: translateY(8px) scaleY(1) scaleX(1.25);
     }
@@ -95,7 +95,7 @@ html, body {
     100% {
       transform: translateY(8px) scaleY(0.8) scaleX(0.8);
     }
-  }
+}
 
 
 .cursor-border {
@@ -642,7 +642,7 @@ nav ul .active-page {
     display: grid;
     justify-items: center;
     gap: 20px;
-    transition: 300ms ease-out;
+    transition: 100ms ease-out;
     overflow: hidden;
 }
 .skills-box p {
@@ -675,7 +675,6 @@ nav ul .active-page {
 }
 .skills-box:hover p {
     color: var(--bg2-col);
-    filter: drop-shadow(0 4px 2px rgba(0, 0, 0, 0.452));
 }
 
 .skills-box img {
