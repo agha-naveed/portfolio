@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const observerOptions = {
         root: null, // Use the viewport as the container
         rootMargin: '0px',
-        threshold: 0.1 // Trigger when 10% of the image is visible
+        threshold: 0.9 // Trigger when 10% of the image is visible
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    
+
 })
 
 
