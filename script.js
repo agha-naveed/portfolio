@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     const observerOptions = {
-        root: null, // Use the viewport as the container
+        root: null,
         rootMargin: '0px',
-        threshold: 0.9 // Trigger when 10% of the image is visible
+        threshold: 0.9
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (entry.isIntersecting) {
                 const image = entry.target;
                 loadImage(image);
-                observer.unobserve(image); // Stop observing after the image has been loaded
+                observer.unobserve(image);
             }
         });
     }, observerOptions);
