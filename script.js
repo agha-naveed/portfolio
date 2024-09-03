@@ -38,12 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         observer.observe(image);
     });
 
-
-
 })
-
-
-
 
 
 
@@ -129,13 +124,11 @@ function checkBoxes() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                skillsRow.classList.add('r-show');
-                skillsRow.classList.remove('sk-box-up');
-                observer.unobserve(skillsRow);
-            }
-            else {
-                skillsRow.classList.remove('r-show');
-                skillsRow.classList.add('sk-box-up');
+                setTimeout(() => {
+                    skillsRow.classList.add('r-show');
+                    skillsRow.classList.remove('sk-box-up');
+                    observer.unobserve(skillsRow);
+                }, 300)
             }
         });
     }, {
