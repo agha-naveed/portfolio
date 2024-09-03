@@ -6,6 +6,40 @@ document.addEventListener("DOMContentLoaded", function() {
         loader.style.display = 'none'
         content.style.display = "block";
     });
+
+
+    const lazyImages = document.querySelectorAll('img.lazy');
+
+    const loadImage = (image) => {
+        const src = image.getAttribute('data-src');
+        if (src) {
+            image.src = src;
+            image.removeAttribute('data-src');
+        }
+    };
+
+    const observerOptions = {
+        root: null, // Use the viewport as the container
+        rootMargin: '0px',
+        threshold: 0.1 // Trigger when 10% of the image is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const image = entry.target;
+                loadImage(image);
+                observer.unobserve(image); // Stop observing after the image has been loaded
+            }
+        });
+    }, observerOptions);
+
+    lazyImages.forEach(image => {
+        observer.observe(image);
+    });
+
+
+    
 })
 
 
@@ -192,7 +226,7 @@ let pr_remove_bg = document.querySelectorAll('.overlay-remove-bg');
 
 const root = document.documentElement;
 
-// Function to handle flipBox click
+
 function handleFlipBoxClick(index) {
     return function(e) {
         projectDetails.style.width = '100%';
@@ -300,3 +334,5 @@ flipBox.forEach(flip_1 => {
         flip_1.style.boxShadow = ``
     });
 })
+
+

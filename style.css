@@ -1299,3 +1299,7 @@ nav ul .active-page {
     left: -20px;
     color: var(--font-color);
 }
+
+.lazy {
+    width: 100%;
+}
