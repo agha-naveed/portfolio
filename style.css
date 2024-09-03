@@ -1310,9 +1310,10 @@ nav ul .active-page {
     width: 3.25em;
     transform-origin: center;
     animation: rotate4 2s linear infinite;
-    position: relative;
+    position: absolute;
     top: 85px;
     left: 42%;
+    z-index: -1;
 }
    
 circle {
