@@ -1270,12 +1270,10 @@ nav ul .active-page {
 }
 
 .r-show {
-    transform: translateX(0) translateY(0) !important;
     opacity: 1 !important;
 }
 .sk-box-up {
     opacity: 0;
-    transform: translateX(0px) translateY(60px);
 }
 .m-b-40 {
     margin-bottom: 40px;
