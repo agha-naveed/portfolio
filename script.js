@@ -212,7 +212,7 @@ let flipBox = document.querySelectorAll('.pr-flip-box')
 let libManag = document.querySelector('.lib_management')
 let musicPlayer = document.querySelector('.music_player')
 let passwordStrength = document.querySelector('.otp_gen')
-let weatherApp = document.querySelector('.weather_app')
+let chatbot = document.querySelector('.chatbot')
 let closeProjectDiv = document.querySelectorAll('.close-project-div')
 let pr_yellow_bg = document.querySelectorAll('.overlay-bg');
 let pr_remove_bg = document.querySelectorAll('.overlay-remove-bg');
@@ -225,7 +225,7 @@ function handleFlipBoxClick(index) {
         projectDetails.style.width = '100%';
         document.body.style.overflow = 'hidden'
         
-        let project = [libManag, musicPlayer, passwordStrength, weatherApp][index];
+        let project = [libManag, musicPlayer, passwordStrength, chatbot][index];
         project.style.display = 'flex';
         
         setTimeout(() => {
@@ -278,7 +278,7 @@ function handleCloseProjectDivClick() {
         root.style.setProperty('--padding', '120px');
     }, 500);
     setTimeout(() => {
-        [libManag, musicPlayer, passwordStrength, weatherApp].forEach(project => project.style.display = 'none');
+        [libManag, musicPlayer, passwordStrength, chatbot].forEach(project => project.style.display = 'none');
     }, 1120);
 
     setTimeout(() => {
