@@ -803,8 +803,9 @@ nav ul .active-page {
 }
 .pr-images {
     width: 100%;
-    display: grid;
-    grid-template-columns: auto auto;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10rem;
     row-gap: 40px;
@@ -812,7 +813,7 @@ nav ul .active-page {
 
 .pr-flip-box {
     width: 20rem;
-    height: 100%;
+    height: fit-content;
     --shine-x: 50%;
     --shine-y: 50%;
     transition: box-shadow 0.1s ease, scale 0.4s ease;
@@ -822,6 +823,38 @@ nav ul .active-page {
     overflow: hidden;
     --op: 0;
 }
+.project-box {
+    height: 350px;
+    position: relative;
+}
+
+
+.project-box:nth-child(2) {
+    align-content: end;
+    left: -40px;
+}
+
+.project-box:nth-child(3) {
+    /* align-content: end; */
+    left: -40px;
+}
+.project-box:nth-child(4) {
+    align-content: center;
+}
+
+/* .pr-flip-box:nth-child(1) {
+    left: -90px;
+} */
+
+/* .pr-flip-box:nth-child(2) {
+    left: -90px;
+} */
+/* .pr-flip-box:nth-child(3) {
+    left: 40px;
+} */
+/* .pr-flip-box:nth-child(4) {
+    left: 100px;
+} */
 
 .pr-flip-box:nth-child(2):hover::before {
     opacity: 0.3;
@@ -1261,6 +1294,11 @@ nav ul .active-page {
 
 
 /* ------- Global Classes -------- */
+
+.lazy {
+    transform: translateX(-100%);
+    transition: 0.3s linear;
+}
 
 .h-line {
     width: 110px;

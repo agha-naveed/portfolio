@@ -15,13 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
         if (src) {
             image.src = src;
             image.removeAttribute('data-src');
+            image.style.transform= "translateX(0)";
         }
     };
 
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.4
+        threshold: 0.7
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
