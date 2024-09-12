@@ -1054,7 +1054,7 @@ nav ul .active-page {
     /* width: 400px; */
     height: 100%;
 }
-.lib_management, .music_player, .otp_gen, .weather_app {
+.lib_management, .music_player, .otp_gen, .chatbot {
     transition: 1s all;
     display: none;
     flex-direction: row-reverse;
