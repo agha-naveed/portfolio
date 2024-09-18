@@ -570,7 +570,7 @@ nav ul .active-page {
     gap: 120px;
     position: relative;
     z-index: 10;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .skills-section::before {
     mix-blend-mode: darken;
@@ -627,6 +627,7 @@ nav ul .active-page {
 .skills-grid-view .skills-row {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
     justify-content: center;
     gap: 20px;
     position: relative;
