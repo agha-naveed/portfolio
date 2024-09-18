@@ -310,7 +310,7 @@ flipBox.forEach(flip_1 => {
         const rotateY = ((x / rect.width) - 0.5) * -45; 
 
         
-        flip_1.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${ rotateY}deg)`;
+        flip_1.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
         const shineX = ((x / rect.width) * 100).toFixed(2);
         const shineY = ((y / rect.height) * 100).toFixed(2);
 
@@ -321,11 +321,11 @@ flipBox.forEach(flip_1 => {
 
     flip_1.addEventListener('mouseleave', () => {
         flip_1.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
-        flip_1.style.scale = 1
+        flip_1.style.scale = 1;
         flip_1.style.setProperty('--shine-x', `0`);
         flip_1.style.setProperty('--shine-y', `0`);
-        flip_1.style.setProperty('--op', 0)
-        flip_1.style.boxShadow = ``
+        flip_1.style.setProperty('--op', 0);
+        flip_1.style.boxShadow = ``;
     });
 })
 
