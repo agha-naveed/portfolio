@@ -824,7 +824,6 @@ nav ul .active-page {
     --op: 0;
 }
 
-
 .pr-flip-box::before {
     content: '';
     position: absolute;
@@ -838,6 +837,27 @@ nav ul .active-page {
     transform: translate(-50%, -50%);
     transition: opacity 0.1s ease, transform 0;
 }
+
+.pr-title h2 {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    z-index: 10;
+    
+    stroke-width: 20px;
+    color: white;
+    font-size: 15px;
+}
+.dashed {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    border-bottom: 3px solid white;
+    width: 70%;
+    z-index: 200;
+}
+
 .flip-box-front-side {
     position: relative;
     z-index: 2;
@@ -873,6 +893,7 @@ nav ul .active-page {
     z-index: 20;
     transition: 0.3s ease-out;
 }
+
 
 
 /* ========== Footer Contact Me ========== */
