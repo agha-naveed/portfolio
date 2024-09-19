@@ -10,9 +10,9 @@
     <title>Agha Naveed - Portfolio | Web Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="img/my-logo.webp" type="image/x-icon" />
+    <link href="aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mobile.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <noscript>Enable JavaScript on your Browser!</noscript>
 </head>
 <body>
@@ -133,7 +133,7 @@
                     <h1>Skills</h1>
                     <div class="all-skills">
                         <div class="skills-grid-view">
-                            <div class="skills-row" data-aos="zoom-out-up">
+                            <div class="skills-row" data-aos="fade-up">
                                 
                                 <div class="skills-box">
                                     <img decoding="async" loading="lazy" src="img/html-logo.webp" alt="HTML Logo" />
@@ -591,15 +591,8 @@
     </div>
 
 
+    <script src="aos.js" defer></script>
     <script src="cursorScript.js" async></script>
     <script src="script.js" defer></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-         AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: true
-        });
-    </script>
 </body>
 </html>

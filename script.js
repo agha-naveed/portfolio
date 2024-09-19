@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("load", function() {
+        AOS.init({
+            duration: 1500,
+        });
         var loader = document.querySelector(".card");
         var content = document.querySelector(".root");
 
