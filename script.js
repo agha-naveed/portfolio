@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("load", function() {
-        AOS.init({
-            duration: 1500,
-        });
         var loader = document.querySelector(".card");
         var content = document.querySelector(".root");
 
@@ -120,38 +117,38 @@ githubLogo.forEach(elem => {
 
 
 
-// function checkBoxes() {
-//     let skillsRow = document.querySelector('.skills-row')
-//     let skillsSec = document.querySelector('.skills-sec')
+function checkBoxes() {
+    let skillsRow = document.querySelector('.skills-row')
+    let skillsSec = document.querySelector('.skills-sec')
 
     
-//     const observer = new IntersectionObserver((entries) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 setTimeout(() => {
-//                     skillsRow.classList.add('r-show');
-//                     skillsRow.classList.remove('sk-box-up');
-//                     observer.unobserve(skillsRow);
-//                 }, 300)
-//             }
-//         });
-//     }, {
-//         threshold: 0.4
-//     });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    skillsRow.classList.add('r-show');
+                    skillsRow.classList.remove('sk-box-up');
+                    observer.unobserve(skillsRow);
+                }, 300)
+            }
+        });
+    }, {
+        threshold: 0.4
+    });
 
-//     observer.observe(skillsSec);
-// }
+    observer.observe(skillsSec);
+}
 
-// let ticking = false;
+let ticking = false;
 
-// function onScroll() {
-//     if (!ticking) {
-//         window.requestAnimationFrame(checkBoxes);
-//         ticking = true;
-//     }
-// }
+function onScroll() {
+    if (!ticking) {
+        window.requestAnimationFrame(checkBoxes);
+        ticking = true;
+    }
+}
   
-// window.addEventListener('scroll', onScroll);
+window.addEventListener('scroll', onScroll);
 
 
 
