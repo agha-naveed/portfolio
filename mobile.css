@@ -170,6 +170,10 @@
     .skills-box p {
         font-size: 15px;
     }
+    .project-box {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 845px) {
